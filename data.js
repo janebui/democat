@@ -1,5 +1,8 @@
 // Created by Jane Bui. Last updated: 12/10/19
 
+
+// State Elections _______________________________________________________________________________
+
 const governor = {
     position: "Governor",
     name: "Gavin Newsom",
@@ -71,6 +74,99 @@ const superintendent = {
     result: true,
     description: ""
 }
+
+const justices = [
+    {
+        name: "Carol Corrigan",
+        recommended: false,
+        result: true,
+        description: ""
+    },
+    {
+        name: "Leondra Kruger",
+        recommended: true,
+        result: true,
+        description: ""
+    }
+]
+
+const props = [
+    {
+        name: "Proposition 1",
+        recommended: true,
+        result: false,
+        description: "Authorizes bonds to fund housing assistance programs for low-income residents, farmers, and veterans."
+    },
+    {
+        name: "Proposition 2",
+        recommended: true,
+        result: true,
+        description: "Uses existing county mental health funds to pay for housing for those with mental illness who are homeless."
+    },
+    {
+        name: "Proposition 3",
+        recommended: true,
+        result: false,
+        description: "Authorizes bonds to fund various water and environmental projects."
+    },
+    {
+        name: "Proposition 4",
+        recommended: true,
+        result: true,
+        description: "Authorizes bonds to construct and expand non-profit children’s hospitals."
+    },
+    {
+        name: "Proposition 5",
+        recommended: false,
+        result: false,
+        description: "Prop 5 will cut $1 billion from schools so that homeowners over 55 can avoid property tax when moving to another house."
+    },
+    {
+        name: "Proposition 6",
+        recommended: false,
+        result: false,
+        description: "Prop 6 will eliminate road repair and transportation funding."
+    },
+    {
+        name: "Proposition 7",
+        recommended: true,
+        result: true,
+        description: "End daylight savings time in CA."
+    },
+    {
+        name: "Proposition 8",
+        recommended: true,
+        result: false,
+        description: "Dialysis."
+    },
+    {
+        name: "Proposition 9",
+        recommended: false,
+        result: false,
+        description: "Removed."
+    },
+    {
+        name: "Proposition 10",
+        recommended: true,
+        result: false,
+        description: "The rent is too damn high. Prop 10 puts fair, annual limits on the amount landlords can raise rent."
+    },
+    {
+        name: "Proposition 11",
+        recommended: false,
+        result: true,
+        description: "Prop 11 strips EMTs and paramedics of their right to meal and rest breaks."
+    },
+    {
+        name: "Proposition 12",
+        recommended: true,
+        result: true,
+        description: "Prop 12 would require farmers to provide more space for egg-laying hens, breeding pigs, and calves raised for veal."
+    }
+]
+
+
+// Local Elections _______________________________________________________________________________
 
 const house = [
     {

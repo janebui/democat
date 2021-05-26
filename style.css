@@ -1,108 +1,140 @@
-html {
-    box-sizing: border-box;
-    background: #eeeeee;
-    font-family: 'helvetica neue';
-    font-size: 20px;
-    font-weight: 200;
-  }
+header, .pageheader {
+  text-align: center;
+  height: 80vh;
+  background-size: cover;
+  background-image: url(democat_bg4.jpg);
+  background-position: center;
+  background-color: #101064;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.pageheader {
+  height: 45vh;
+  align-items: center;
+}
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #303030;
+  background-color: #cad6e3;
   
-  body {
-    margin: 0;
+}
+
+.intro {
+  background-color: white;
+  margin: 20px 5px 5px 5px;
+  padding: 20px 10%;
+  border-radius: 10px;
+  font-size: 1.1em;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  line-height: 1em;
+  padding: 0;
+}
+
+.content ul {
+    padding: 0;
+}
+
+.left-content,
+.right-content {
+  flex: 1 1;
+  min-width: 300px;
+}
+
+.section {
+  background-color: white;
+  margin: 5px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.navbar {
+  box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.nav-item {
+  font-size: 1.5em;
+  padding: 5px;
+}
+
+h1 {
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+  font-family: 'Pacifico', cursive;
+}
+#subtitle {
+  font-size: 1.5em;
+  color: white;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 1.7em;
+  color: #474747;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 1.5em;
+  color: #062a54;
+  margin-top: 0.9em;
+  margin-bottom: 1px;
+
+}
+
+h4 {
+  color: grey;
+  font-weight: 400;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+
+h5 {
+  color: grey;
+  font-size: 1.2em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#form {
+  max-width: 450px;
+  margin: auto;
+}
+
+#blurb {
+  color: red;
+}
+
+#mia {
+      margin: 0 auto 20px;
+      display: block;
+}
+
+footer {
+  text-align: center;
+  margin: 20px;
+}
+
+
+@media screen and (max-width: 600px) {
+  .content {
+    padding: 6px;
+    margin: 4px;
   }
-  
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-  
-  .site-wrap {
-    max-width: 700px;
-    margin: 70px auto;
-    background: white;
-    padding: 40px;
-    text-align: justify;
-    transform: scale(0.98);
-    transition: transform 0.5s;
-  }
-  
-  header {
-    text-align: center;
-    height: 50vh;
-    background: url(http://wes.io/iEgP/wow-so-deep.jpg) center no-repeat;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  h1 {
-    color: white;
-    font-size: 7vw;
-    text-shadow: 3px 4px 0 rgba(0,0,0,0.2);
-  }
-  
-  nav {
-    background: white;
-    top: 0;
-    width: 100%;
-    transition: all 0.5s;
-    position: relative;
-    z-index: 1;
-    box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.2);
-  }
-  
-  .fixed-nav nav {
-    position: fixed;
-    
-  }
-  
-  nav ul {
-    margin: 0;
-    padding:0;
-    list-style: none;
-    display: flex;
-  }
-  
-  nav li {
-    flex: 1;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  nav a {
-    text-decoration: none;
-    padding: 20px;
-    display: inline-block;
-    color: black;
-    transition: all 0.2s;
-    text-transform: uppercase;
+  .container {
+    padding: 1px;
   }
 
-  #container {
-      display: grid;
-      grid-template-rows: 1fr 1fr;
-  }
-
-  #intro {
-      background-color: blue;
- 
-  }
-
-  #content {
-      display: flex;
-      
-      flex-wrap: wrap;
-  }
-
-  #left-content {
-      background-color: yellow;
-      flex: 4;
-      min-width: 400px;
-  }
-
-  #right-content {
-      background-color: purple;
-      flex: 3;
-      min-width: 400px;
-  }
+}

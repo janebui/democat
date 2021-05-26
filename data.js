@@ -1,196 +1,2099 @@
-// Created by Jane Bui. Last updated: 12/10/19
+// CA Nov 2020 Elections Vote Democat Guide
+// Created by Jane Bui. Last updated: 9/21/20
 
+// CA State Elections  _______________________________________________________________________________
 
-// State Elections _______________________________________________________________________________
-
-const governor = {
-    position: "Governor",
-    name: "Gavin Newsom",
-    locality: "CA",
-    result: true,
-    description: "This former San Francisco mayor gained national attention for his support of gay marriage 14 years ago. He is endorsed by California’s current governor Jerry Brown, who is well-loved and leaves big shoes to fill."
-}
-
-const lieuGov = {
-    position: "Lieutenant Governor",
-    name: "Eleni Kounalakis",
-    locality: "CA",
-    result: true,
-    description: "Eleni Kounalakis supports affordable higher education, universal healthcare, and protecting the environment."
-}
-
-const secState = {
-    position: "Secretary of State",
-    name: "Alex Padilla",
-    locality: "CA",
-    result: true,
-    description: "An MIT Engineering graduate and current CA Secretary of State, Alex Padilla has done much to increase voter registration and participation. He is endorsed by Gov. Jerry Brown, Sen. Dianne Feinstein, California Democratic Party, California Labor Federation, and Planned Parenthood."
-}
-
-const stateController = {
-    position: "State Controller",
-    name: "Betty Yee",
-    locality: "CA",
-    result: true,
-    description: ""
-}
-
-const treasurer = {
-    position: "Treasurer",
-    name: "Fiona Ma",
-    locality: "CA",
-    result: true,
-    description: ""
-}
-
-const AG = {
-    position: "Attorney General",
-    name: "Xavier Becerra",
-    locality: "CA",
-    result: true,
-    description: "Xavier Becerra, the incumbent attorney general for CA with a JD from Stanford Law School, has done a great job of defending us against Trump. He has filed 28 lawsuits against the Trump administration, more than any state general attorney in America. We will vote for Becerra to continue being a thorn in Trump’s side."
-}
-
-const commissioner = {
-    position: "Insurance Commissioner",
-    name: "Ricardo Lara",
-    locality: "CA",
-    result: true,
-    description: ""
-}
-
-const senator = {
-    position: "Senate",
-    name: "Dianne Feinstein",
-    locality: "CA",
-    result: true,
-    description: ""
-}
-
-const superintendent = {
-    position: "State Superintendent of Public Instruction",
-    name: "Tony Thurmond",
-    locality: "CA",
-    result: true,
-    description: ""
-}
-
-const justices = [
-    {
-        name: "Carol Corrigan",
-        recommended: false,
-        result: true,
-        description: ""
-    },
-    {
-        name: "Leondra Kruger",
-        recommended: true,
-        result: true,
-        description: ""
-    }
-]
-
-const props = [
-    {
-        name: "Proposition 1",
-        recommended: true,
+const candidates = [{
+        position: "President",
+        name: "Joe Biden",
+        locality: "USA",
         result: false,
-        description: "Authorizes bonds to fund housing assistance programs for low-income residents, farmers, and veterans."
+        description: "+ Kamala Harris for Vice President!"
+    },
+    // {
+    //     position: "Governor",
+    //     name: "Gavin Newsom",
+    //     locality: "CA",
+    //     result: true,
+    //     description: ""
+    // }, {
+    //     position: "Lieutenant Governor",
+    //     name: "",
+    //     locality: "CA",
+    //     result: true,
+    //     description: ""
+    // },
+    // {
+    //     position: "Secretary of State",
+    //     name: "",
+    //     locality: "CA",
+    //     result: true,
+    //     description: ""
+    // },
+    // {
+    //     position: "State Controller",
+    //     name: "",
+    //     locality: "CA",
+    //     result: true,
+    //     description: ""
+    // },
+    // {
+    //     position: "Treasurer",
+    //     name: "",
+    //     locality: "CA",
+    //     result: true,
+    //     description: ""
+    // },
+    // {
+    //     position: "Attorney General",
+    //     name: "",
+    //     locality: "CA",
+    //     result: true,
+    //     description: ""
+    // },
+    // {
+    //     position: "Insurance Commissioner",
+    //     name: "",
+    //     locality: "CA",
+    //     result: true,
+    //     description: ""
+    // },
+    // {
+    //     position: "Senate",
+    //     name: "",
+    //     locality: "CA",
+    //     result: true,
+    //     description: ""
+    // },
+    // {
+    //     position: "State Superintendent of Public Instruction",
+    //     name: "",
+    //     locality: "CA",
+    //     result: true,
+    //     description: ""
+    // },
+    // {
+    //     position: "Justice",
+    //     name: "NO on ...",
+    //     result: true,
+    //     description: ""
+    // },
+    // {
+    //     position: "Justice",
+    //     name: "YES on ...",
+    //     result: true,
+    //     description: ""
+    // }
+];
+
+const props = [{
+        name: "Proposition 14",
+        recommended: "Yes",
+        result: "",
+        description: "Borrowing for Stem Cell Research."
     },
     {
-        name: "Proposition 2",
-        recommended: true,
-        result: true,
-        description: "Uses existing county mental health funds to pay for housing for those with mental illness who are homeless."
+        name: "Proposition 15",
+        recommended: "Yes",
+        result: "",
+        description: "Schools and Communities First Initiative, is a citizen-initiated California ballot proposition that would create a split roll property tax system and spend the revenue increase on education and other public services."
     },
     {
-        name: "Proposition 3",
-        recommended: true,
-        result: false,
-        description: "Authorizes bonds to fund various water and environmental projects."
+        name: "Proposition 16",
+        recommended: "Yes",
+        result: "",
+        description: "Ends the ban on affirmative action."
     },
     {
-        name: "Proposition 4",
-        recommended: true,
-        result: true,
-        description: "Authorizes bonds to construct and expand non-profit children’s hospitals."
+        name: "Proposition 17",
+        recommended: "Yes",
+        result: "",
+        description: "Grants the right to vote for people on parole."
     },
     {
-        name: "Proposition 5",
-        recommended: false,
-        result: false,
-        description: "Prop 5 will cut $1 billion from schools so that homeowners over 55 can avoid property tax when moving to another house."
+        name: "Proposition 18",
+        recommended: "Yes",
+        result: "",
+        description: "Allows 17-year-olds to vote if they turn 18 by the general election."
     },
     {
-        name: "Proposition 6",
-        recommended: false,
-        result: false,
-        description: "Prop 6 will eliminate road repair and transportation funding."
+        name: "Proposition 19",
+        recommended: "Yes",
+        result: "",
+        description: "'It would eliminate provisions that allow often-wealthy parents to transfer without tax consequences ownership of family homes to their children who use the residences as rental properties.' (LA Times)"
     },
     {
-        name: "Proposition 7",
-        recommended: true,
-        result: true,
-        description: "End daylight savings time in CA."
+        name: "Proposition 20",
+        recommended: "No",
+        result: "",
+        description: "It would allow some theft-related crimes to be charged as felonies."
     },
     {
-        name: "Proposition 8",
-        recommended: true,
-        result: false,
-        description: "Dialysis."
+        name: "Proposition 21",
+        recommended: "Yes",
+        result: "",
+        description: "Rent Control"
     },
     {
-        name: "Proposition 9",
-        recommended: false,
-        result: false,
-        description: "Removed."
+        name: "Proposition 22",
+        recommended: "No",
+        result: "",
+        description: "Allows Uber/Lyft/Doordash to classify drivers as independent contractors instead of employees so they won't be covered by employment laws—including minimum wage, overtime, unemployment insurance, and workers’ compensation. Opposed by the California Labor Federation."
     },
     {
-        name: "Proposition 10",
-        recommended: true,
-        result: false,
-        description: "The rent is too damn high. Prop 10 puts fair, annual limits on the amount landlords can raise rent."
+        name: "Proposition 23",
+        recommended: "Yes",
+        result: "",
+        description: "'Requires chronic dialysis clinics to: have an on-site physician while patients are being treated; report data on dialysis-related infections; obtain consent from the state health department before closing a clinic; and not discriminate against patients based on the source of payment for care.' (Ballotpedia)"
     },
     {
-        name: "Proposition 11",
-        recommended: false,
-        result: true,
-        description: "Prop 11 strips EMTs and paramedics of their right to meal and rest breaks."
+        name: "Proposition 24",
+        recommended: "Yes",
+        result: "",
+        description: "Expands consumer data privacy laws, prevents business from sharing personal information."
     },
     {
-        name: "Proposition 12",
-        recommended: true,
-        result: true,
-        description: "Prop 12 would require farmers to provide more space for egg-laying hens, breeding pigs, and calves raised for veal."
+        name: "Proposition 25",
+        recommended: "Yes",
+        result: "",
+        description: "'The initiative would replace cash bail with risk assessments for detained suspects awaiting trials. The cash bail system is inherently discriminatory and antithetical to our values of justice, fairness and racial equity.' (Sierra Club)"
     }
 ]
 
 
-// Local Elections _______________________________________________________________________________
+// US House of Representatives __________________________________________________________________________
 
-const house = [
-    {
+const CD = [{
         name: "Audrey Denney",
-        locality: "Northeastern California",
+        locality: "Northeastern California (Butte, Glenn, Lassen, Modoc, Nevada, Placer, Plumas, Shasta, Sierra, Siskiyou, Tehama counties)",
         result: false,
         zip: [
-             89439, 95568, 95602, 95603, 95648, 95658, 95681, 95701, 95703, 95713, 95714, 95715, 95717, 95722, 95728, 95736, 95901, 95910, 95914, 95915, 95916, 95917, 95920, 95922, 95923, 95926, 95928, 95930, 95934, 95936, 95938, 95941, 95942, 95943, 95944, 95945, 95946, 95947, 95948, 95949, 95951, 95954, 95956, 95959, 95960, 95963, 95965, 95966, 95968, 95969, 95970, 95971, 95973, 95974, 95975, 95977, 95978, 95981, 95983, 95984, 95986, 95988, 96001, 96002, 96003, 96006, 96007, 96008, 96009, 96011, 96013, 96014, 96015, 96016, 96017, 96019, 96020, 96021, 96022, 96023, 96025, 96027, 96028, 96029, 96031, 96032, 96033, 96034, 96035, 96037, 96038, 96039, 96040, 96044, 96047, 96049, 96050, 96051, 96054, 96055, 96056, 96057, 96058, 96059, 96061, 96062, 96063, 96064, 96065, 96067, 96068, 96069, 96071, 96073, 96074, 96075, 96076, 96080, 96084, 96085, 96086, 96087, 96088, 96090, 96092, 96094, 96096, 96097, 96101, 96103, 96104, 96105, 96106, 96108, 96109, 96110, 96111, 96112, 96113, 96114, 96115, 96116, 96117, 96118, 96119, 96121, 96122, 96123, 96124, 96125, 96126, 96128, 96129, 96130, 96132, 96134, 96135, 96136, 96137, 96161, 97520, 97632, 97633, 97635
-        ]
+            89439, 95568, 95602, 95603, 95648, 95658, 95681, 95701, 95703, 95713, 95714, 95715, 95717, 95722, 95728, 95736, 95901, 95910, 95914, 95915, 95916, 95917, 95920, 95922, 95923, 95926, 95928, 95930, 95934, 95936, 95938, 95941, 95942, 95943, 95944, 95945, 95946, 95947, 95948, 95949, 95951, 95954, 95956, 95959, 95960, 95963, 95965, 95966, 95968, 95969, 95970, 95971, 95973, 95974, 95975, 95977, 95978, 95981, 95983, 95984, 95986, 95988, 96001, 96002, 96003, 96006, 96007, 96008, 96009, 96011, 96013, 96014, 96015, 96016, 96017, 96019, 96020, 96021, 96022, 96023, 96025, 96027, 96028, 96029, 96031, 96032, 96033, 96034, 96035, 96037, 96038, 96039, 96040, 96044, 96047, 96049, 96050, 96051, 96054, 96055, 96056, 96057, 96058, 96059, 96061, 96062, 96063, 96064, 96065, 96067, 96068, 96069, 96071, 96073, 96074, 96075, 96076, 96080, 96084, 96085, 96086, 96087, 96088, 96090, 96092, 96094, 96096, 96097, 96101, 96103, 96104, 96105, 96106, 96108, 96109, 96110, 96111, 96112, 96113, 96114, 96115, 96116, 96117, 96118, 96119, 96121, 96122, 96123, 96124, 96125, 96126, 96128, 96129, 96130, 96132, 96134, 96135, 96136, 96137, 96161, 97520, 97632, 97633, 97635
+        ],
+        description: ""
     },
     {
         name: "Jared Huffman",
-        locality: "Northern coast (San Rafael, Petaluma, Novato, Windsor, Healdsburg, Ukiah, Fort Bragg, Fortuna, Eureka, Arcata, McKinleyville, and Crescent City)",
+        locality: "Northern Coast (San Rafael, Petaluma, Novato, Windsor, Healdsburg, Ukiah, Fort Bragg, Fortuna, Eureka, Arcata, McKinleyville, and Crescent City)",
         result: true,
-        zip: [    
+        zip: [
             94515, 94901, 94903, 94904, 94920, 94922, 94923, 94924, 94925, 94929, 94930, 94931, 94933, 94937, 94938, 94939, 94940, 94941, 94945, 94946, 94947, 94949, 94950, 94951, 94952, 94954, 94956, 94957, 94960, 94963, 94964, 94965, 94970, 94971, 94972, 94973, 95401, 95403, 95404, 95407, 95410, 95412, 95415, 95417, 95420, 95421, 95425, 95427, 95428, 95429, 95430, 95432, 95436, 95437, 95441, 95444, 95445, 95446, 95448, 95449, 95450, 95454, 95456, 95459, 95460, 95462, 95463, 95465, 95466, 95468, 95469, 95470, 95471, 95472, 95482, 95486, 95488, 95490, 95492, 95494, 95497, 95501, 95503, 95511, 95514, 95519, 95521, 95524, 95525, 95526, 95527, 95528, 95531, 95536, 95537, 95540, 95542, 95543, 95545, 95546, 95547, 95548, 95549, 95550, 95551, 95552, 95553, 95554, 95555, 95556, 95558, 95559, 95560, 95562, 95563, 95564, 95565, 95567, 95569, 95570, 95571, 95573, 95585, 95587, 95589, 95595, 96010, 96024, 96041, 96046, 96048, 96052, 96076, 96091, 96093
-        ]
+        ],
+        description: ""
     },
     {
         name: "John Garamendi",
-        locality: "Colusa, Sutter, and Yuba counties plus portions of Glenn, Lake, Sacramento, Solano, and Yolo counties",
+        locality: "Sacramento Valley (Colusa, Sutter, and Yuba counties plus portions of Glenn, Lake, Sacramento, Solano, and Yolo counties)",
         result: true,
         zip: [
             94510, 94512, 94533, 94534, 94535, 94571, 94585, 94591, 95422, 95423, 95443, 95451, 95453, 95457, 95458, 95464, 95469, 95485, 95493, 95605, 95606, 95607, 95612, 95615, 95616, 95618, 95620, 95625, 95626, 95627, 95632, 95637, 95639, 95641, 95645, 95648, 95652, 95653, 95659, 95668, 95673, 95674, 95679, 95680, 95681, 95687, 95688, 95690, 95691, 95692, 95694, 95695, 95697, 95698, 95757, 95758, 95776, 95823, 95831, 95832, 95834, 95835, 95837, 95843, 95901, 95903, 95912, 95914, 95918, 95919, 95920, 95922, 95925, 95930, 95932, 95935, 95937, 95939, 95941, 95948, 95950, 95951, 95953, 95955, 95957, 95960, 95961, 95962, 95963, 95966, 95970, 95977, 95979, 95981, 95982, 95987, 95988, 95991, 95993
-        ]
+        ],
+        description: ""
+    },
+    {
+        name: "Brynne Kennedy",
+        locality: "The Sierra (Alpine, Amador, Calaveras, El Dorado, Mariposa, and Tuolumne counties plus portions of Fresno, Madera, Nevada, and Placer counties)",
+        result: false,
+        zip: [
+            93601, 93602, 93604, 93605, 93610, 93614, 93619, 93621, 93623, 93626, 93628, 93633, 93634, 93636, 93638, 93641, 93643, 93644, 93645, 93651, 93653, 93657, 93664, 93667, 93669, 93675, 95222, 95223, 95224, 95225, 95226, 95228, 95230, 95232, 95233, 95245, 95246, 95247, 95248, 95249, 95250, 95251, 95252, 95254, 95255, 95257, 95305, 95306, 95310, 95311, 95314, 95318, 95321, 95325, 95327, 95329, 95335, 95338, 95345, 95346, 95364, 95369, 95370, 95372, 95375, 95379, 95383, 95389, 95601, 95603, 95604, 95614, 95619, 95623, 95626, 95629, 95631, 95633, 95634, 95635, 95636, 95640, 95642, 95646, 95648, 95650, 95651, 95658, 95661, 95663, 95664, 95665, 95666, 95667, 95668, 95669, 95672, 95675, 95677, 95678, 95681, 95682, 95684, 95685, 95689, 95699, 95709, 95713, 95717, 95720, 95721, 95724, 95726, 95728, 95735, 95746, 95747, 95762, 95765, 96120, 96140, 96141, 96142, 96143, 96145, 96146, 96148, 96150, 96155, 96161
+        ],
+        description: ""
+    },
+    {
+        name: "Mike Thompson",
+        locality: "Wine Country (Cotati, Rohnert Park, Santa Rosa, Sonoma, Napa, American Canyon, Vallejo, Benicia, Hercules, and part of Martinez)",
+        result: true,
+        zip: [
+            94503, 94508, 94510, 94515, 94525, 94534, 94547, 94553, 94558, 94559, 94564, 94567, 94569, 94572, 94573, 94574, 94576, 94589, 94590, 94591, 94592, 94599, 94803, 94806, 94928, 94931, 94951, 94952, 94954, 95401, 95403, 95404, 95405, 95407, 95409, 95422, 95426, 95431, 95435, 95439, 95442, 95451, 95452, 95453, 95457, 95461, 95467, 95472, 95476, 95492
+        ],
+        description: ""
+    },
+    {
+        name: "Doris Matsui",
+        locality: "Sacramento, West Sacramento, Citrus Heights",
+        result: true,
+        zip: [
+            95605, 95618, 95620, 95621, 95652, 95660, 95673, 95691, 95758, 95811, 95814, 95815, 95816, 95817, 95818, 95819, 95820, 95821, 95822, 95823, 95824, 95825, 95826, 95828, 95829, 95831, 95832, 95833, 95834, 95835, 95837, 95838, 95841, 95842, 95843, 95864
+        ],
+        description: ""
+    },
+    {
+        name: "Ami Bera",
+        locality: "East Sacramento Area (Citrus Heights, Elk Grove, Folsom, Rancho Cordova)",
+        result: true,
+        zip: [
+            95608, 95610, 95621, 95624, 95628, 95630, 95632, 95638, 95655, 95662, 95670, 95683, 95693, 95742, 95757, 95758, 95821, 95823, 95825, 95826, 95827, 95828, 95829, 95830, 95841, 95842, 95864
+        ],
+        description: ""
+    },
+    {
+        name: "Christine Bubser",
+        locality: "Fresno Area (Inyo, Mono, San Bernardino counties)",
+        result: false,
+        zip: [
+            89010, 89019, 89060, 89061, 92328, 92384, 92389, 93244, 93262, 93265, 93271, 93286, 93512, 93513, 93514, 93517, 93522, 93526, 93527, 93529, 93530, 93541, 93545, 93546, 93549, 93592, 93601, 93602, 93603, 93604, 93605, 93610, 93611, 93612, 93614, 93616, 93619, 93621, 93623, 93626, 93628, 93633, 93634, 93636, 93638, 93641, 93643, 93644, 93645, 93646, 93647, 93650, 93651, 93653, 93654, 93657, 93664, 93667, 93669, 93675, 93702, 93703, 93704, 93705, 93706, 93710, 93711, 93720, 93722, 93723, 93725, 93726, 93727, 93728, 93730, 95222, 95223, 95224, 95225, 95226, 95228, 95230, 95232, 95233, 95245, 95246, 95247, 95248, 95249, 95250, 95251, 95252, 95254, 95255, 95257, 95305, 95306, 95307, 95310, 95311, 95313, 95314, 95316, 95318, 95319, 95321, 95323, 95325, 95326, 95327, 95328, 95329, 95335, 95338, 95345, 95346, 95354, 95355, 95357, 95358, 95361, 95364, 95369, 95370, 95372, 95375, 95379, 95380, 95382, 95383, 95386, 95389, 95601, 95624, 95629, 95632, 95638, 95640, 95642, 95646, 95655, 95665, 95666, 95669, 95670, 95675, 95683, 95685, 95689, 95693, 95699, 95742, 95827, 95830, 96107, 96133
+        ],
+        description: ""
+    },
+    {
+        name: "Jerry McNerney",
+        locality: "Stockton Area (Antioch, Brentwood, Galt, Lathrop, Lodi, Manteca, Oakley, Stockton, Tracy)",
+        result: true,
+        zip: [
+            94505, 94509, 94511, 94513, 94514, 94531, 94548, 94561, 95202, 95203, 95204, 95205, 95206, 95207, 95209, 95210, 95211, 95212, 95215, 95219, 95220, 95227, 95230, 95231, 95234, 95236, 95237, 95240, 95242, 95258, 95304, 95320, 95330, 95336, 95361, 95366, 95391, 95632, 95641, 95686, 95757
+        ],
+        description: ""
+    },
+    {
+        name: "Josh Harder",
+        locality: "Modesto Area (Ceres, Escalon, Hughson, Manteca, Modesto, Newman, Oakdale, Patterson, Ripon, Riverbank, Tracy, Turlock, Waterford)",
+        result: true,
+        zip: [
+            95230, 95304, 95307, 95313, 95316, 95319, 95320, 95322, 95323, 95326, 95328, 95329, 95330, 95336, 95337, 95350, 95351, 95354, 95355, 95356, 95357, 95358, 95360, 95361, 95363, 95366, 95367, 95368, 95376, 95377, 95380, 95382, 95385, 95386, 95387
+        ],
+        description: ""
+    },
+    {
+        name: "Mark DeSaulnier",
+        locality: "Contra Costa County",
+        result: true,
+        zip: [
+            94505, 94506, 94507, 94509, 94513, 94514, 94516, 94517, 94518, 94519, 94520, 94521, 94523, 94526, 94528, 94530, 94547, 94549, 94551, 94553, 94556, 94563, 94564, 94565, 94575, 94582, 94583, 94588, 94595, 94596, 94597, 94598, 94611, 94706, 94707, 94708, 94801, 94803, 94804, 94805, 94806, 94850
+        ],
+        description: ""
+    },
+    {
+        name: "Nancy Pelosi",
+        locality: "San Francisco",
+        result: true,
+        zip: [
+            94102, 94103, 94104, 94105, 94107, 94108, 94109, 94110, 94111, 94112, 94114, 94115, 94116, 94117, 94118, 94121, 94122, 94123, 94124, 94127, 94129, 94130, 94131, 94133, 94134, 94158
+        ],
+        description: "Nancy Pelosi is the Speaker of the U.S. House of Representatives for the 116th Congress. As the top Democrat in the House, Pelosi is fighting to address the needs of working families and protect America from the dangerous agenda of Donald Trump and Kevin McCarthy."
+    },
+    {
+        name: "Barbara Lee",
+        locality: "Northern Alameda Area (Alameda, Albany, Berkeley, Emeryville, Oakland, Piedmont, San Francisco, San Leandro)",
+        result: true,
+        zip: [
+            94501, 94502, 94546, 94577, 94578, 94579, 94580, 94601, 94602, 94603, 94605, 94606, 94607, 94608, 94609, 94610, 94611, 94612, 94613, 94618, 94619, 94621, 94702, 94703, 94704, 94705, 94706, 94707, 94708, 94709, 94710, 94720
+        ],
+        description: ""
+    },
+    {
+        name: "Jackie Speier",
+        locality: "San Mateo County Area",
+        result: true,
+        zip: [
+            94002, 94005, 94010, 94014, 94015, 94019, 94025, 94030, 94037, 94038, 94044, 94061, 94062, 94063, 94065, 94066, 94070, 94074, 94080, 94112, 94116, 94127, 94128, 94131, 94132, 94134, 94303, 94401, 94402, 94403, 94404
+        ],
+        description: ""
+    },
+    {
+        name: "Eric Swalwell",
+        locality: "East Bay (Castro Valley, Dublin, Fremont, Hayward, Livermore, Pleasanton, Sunol, Union City; parts of Contra Costa County and San Ramon)",
+        result: true,
+        zip: [
+            94505, 94506, 94514, 94526, 94536, 94538, 94539, 94541, 94542, 94544, 94545, 94546, 94550, 94551, 94552, 94555, 94566, 94568, 94577, 94578, 94580, 94582, 94583, 94586, 94587, 94588, 94605, 94619, 95377, 95391
+        ],
+        description: ""
+    },
+    {
+        name: "Jim Costa",
+        locality: "Madera, Merced, Los Banos; parts of Fresno",
+        result: true,
+        zip: [
+            93606, 93610, 93620, 93622, 93630, 93635, 93636, 93637, 93638, 93665, 93701, 93702, 93703, 93704, 93705, 93706, 93711, 93721, 93722, 93723, 93725, 93726, 93727, 93728, 95301, 95303, 95312, 95315, 95317, 95322, 95324, 95333, 95334, 95340, 95341, 95348, 95360, 95365, 95369, 95374, 95380, 95388
+        ],
+        description: ""
+    },
+    {
+        name: "Ro Khanna",
+        locality: "Silicon Valley (Sunnyvale, Cupertino, Santa Clara, Fremont, Newark, North San Jose, and Milpitas)",
+        result: true,
+        zip: [
+            94024, 94043, 94085, 94086, 94087, 94089, 94536, 94538, 94539, 94555, 94560, 95002, 95014, 95035, 95050, 95051, 95053, 95054, 95070, 95110, 95112, 95117, 95126, 95127, 95129, 95131, 95132, 95133, 95134, 95140
+        ],
+        description: ""
+    },
+    {
+        name: "Anna Eshoo",
+        locality: "SF Bay Area",
+        result: true,
+        zip: [
+            94020, 94021, 94022, 94024, 94025, 94027, 94028, 94040, 94041, 94043, 94060, 94061, 94062, 94063, 94074, 94085, 94086, 94087, 94301, 94303, 94304, 94305, 94306, 95005, 95006, 95007, 95008, 95014, 95017, 95018, 95030, 95032, 95033, 95037, 95041, 95050, 95060, 95064, 95065, 95066, 95070, 95073, 95117, 95118, 95119, 95120, 95123, 95124, 95125, 95126, 95128, 95129, 95130, 95136
+        ],
+        description: ""
+    },
+    {
+        name: "Zoe Lofgren",
+        locality: "Santa Clara County (Gilroy, Morgan Hill, San Jose)",
+        result: true,
+        zip: [
+            94550, 95013, 95020, 95023, 95033, 95035, 95037, 95046, 95050, 95076, 95110, 95111, 95112, 95113, 95116, 95118, 95119, 95120, 95121, 95122, 95123, 95124, 95125, 95126, 95127, 95128, 95132, 95133, 95135, 95136, 95138, 95139, 95140, 95148
+        ],
+        description: ""
+    },
+    {
+        name: "Jimmy Panetta",
+        locality: "Central Coast",
+        result: true,
+        zip: [
+            93210, 93426, 93450, 93451, 93461, 93901, 93905, 93906, 93907, 93908, 93920, 93921, 93923, 93924, 93925, 93926, 93927, 93928, 93930, 93932, 93933, 93940, 93943, 93950, 93953, 93954, 93955, 93960, 93962, 95003, 95004, 95010, 95012, 95019, 95020, 95023, 95039, 95043, 95045, 95060, 95062, 95064, 95065, 95066, 95073, 95075, 95076
+        ],
+        description: ""
+    },
+    {
+        name: "TJ Cox",
+        locality: "San Joaquin Valley",
+        result: true,
+        zip: [
+            93201, 93202, 93203, 93204, 93206, 93210, 93212, 93215, 93218, 93219, 93220, 93230, 93234, 93239, 93241, 93242, 93245, 93249, 93250, 93251, 93256, 93257, 93261, 93263, 93266, 93270, 93272, 93274, 93280, 93304, 93305, 93306, 93307, 93308, 93311, 93313, 93314, 93461, 93608, 93609, 93616, 93619, 93620, 93622, 93624, 93625, 93627, 93630, 93631, 93640, 93648, 93652, 93654, 93656, 93657, 93660, 93662, 93668, 93706, 93723, 93725
+        ],
+        description: ""
+    },
+    {
+        name: "Phil Arballo",
+        locality: "East San Joaquin Valley",
+        result: false,
+        zip: [
+            93212, 93221, 93223, 93235, 93247, 93257, 93267, 93274, 93277, 93286, 93291, 93292, 93611, 93612, 93615, 93616, 93618, 93619, 93621, 93626, 93631, 93641, 93646, 93647, 93650, 93654, 93657, 93666, 93673, 93675, 93704, 93705, 93710, 93711, 93720, 93722, 93725, 93726, 93727, 93730
+        ],
+        description: ""
+    },
+    {
+        name: "Kim Mangone",
+        locality: "South San Joaquin Valley",
+        result: false,
+        zip: [
+            93203, 93205, 93206, 93207, 93208, 93220, 93221, 93222, 93224, 93225, 93226, 93238, 93240, 93243, 93244, 93247, 93249, 93251, 93252, 93255, 93257, 93258, 93260, 93262, 93265, 93267, 93268, 93271, 93276, 93283, 93285, 93286, 93287, 93292, 93301, 93304, 93305, 93306, 93307, 93308, 93309, 93311, 93312, 93313, 93314, 93501, 93505, 93516, 93518, 93519, 93523, 93524, 93527, 93528, 93531, 93534, 93535, 93536, 93551, 93554, 93555, 93560, 93561, 93603, 93633, 93647
+        ],
+        description: ""
+    },
+    {
+        name: "Salud Carbajal",
+        locality: "San Luis Obispo / Santa Barbara / Ventura Area",
+        result: true,
+        zip: [
+            91384, 93001, 93003, 93013, 93015, 93023, 93040, 93060, 93067, 93101, 93103, 93105, 93108, 93109, 93110, 93111, 93117, 93225, 93243, 93252, 93254, 93401, 93402, 93405, 93410, 93420, 93422, 93424, 93426, 93427, 93428, 93429, 93430, 93432, 93433, 93434, 93436, 93437, 93440, 93441, 93442, 93444, 93445, 93446, 93449, 93451, 93452, 93453, 93454, 93455, 93458, 93460, 93461, 93463, 93465
+        ],
+        description: ""
+    },
+    {
+        name: "Christy Smith",
+        locality: "North LA County Area (Lancaster, Los Angeles, Palmdale, Santa Clarita, Simi Valley)",
+        result: false,
+        zip: [
+            91042, 91304, 91311, 91321, 91326, 91344, 91350, 91351, 91354, 91355, 91362, 91381, 91384, 91387, 91390, 93063, 93064, 93065, 93243, 93252, 93510, 93532, 93534, 93535, 93536, 93543, 93544, 93550, 93551, 93552, 93553, 93563, 93591
+        ],
+        description: ""
+    },
+    {
+        name: "Julia Brownley",
+        locality: "Ventura / Oxnard / LA Area",
+        result: true,
+        zip: [
+            90265, 91320, 91360, 91361, 91362, 91377, 93001, 93003, 93004, 93010, 93012, 93015, 93021, 93022, 93023, 93030, 93033, 93035, 93036, 93040, 93041, 93042, 93043, 93060, 93063, 93065, 93066
+        ],
+        description: ""
+    },
+    {
+        name: "Judy Chu",
+        locality: "LA / San Bernardino / San Gabriel Foothills",
+        result: true,
+        zip: [
+            90022, 90042, 90640, 91001, 91006, 91007, 91008, 91011, 91016, 91024, 91030, 91042, 91101, 91103, 91104, 91105, 91106, 91107, 91108, 91701, 91702, 91711, 91731, 91732, 91733, 91740, 91741, 91750, 91754, 91755, 91759, 91767, 91770, 91773, 91775, 91776, 91780, 91784, 91786, 91801, 91803, 92397, 93543, 93544, 93550, 93552, 93553, 93563
+        ],
+        description: ""
+    },
+    {
+        name: "Adam Schiff",
+        locality: "Burbank Area",
+        result: true,
+        zip: [
+            90004, 90026, 90027, 90028, 90029, 90031, 90036, 90038, 90039, 90042, 90046, 90048, 90065, 90068, 90069, 90210, 91011, 91020, 91040, 91042, 91046, 91103, 91105, 91201, 91202, 91203, 91204, 91205, 91206, 91207, 91208, 91210, 91214, 91331, 91342, 91352, 91387, 91390, 91501, 91502, 91504, 91505, 91506, 91605, 91608, 93510
+        ],
+        description: ""
+    },
+    {
+        name: "Tony Cardenas",
+        locality: "North Central San Fernando Valley (San Fernando, Los Angeles)",
+        result: true,
+        zip: [
+            91040, 91321, 91331, 91340, 91342, 91343, 91344, 91345, 91352, 91387, 91401, 91402, 91405, 91406, 91411, 91504, 91505, 91601, 91602, 91605, 91606, 91607
+        ],
+        description: ""
+    },
+    {
+        name: "Brad Sherman",
+        locality: "West San Fernando Valley (Burbank, Hidden Hills, Los Angeles)",
+        result: true,
+        zip: [
+            90046, 90049, 90068, 90077, 90210, 91302, 91303, 91304, 91306, 91307, 91311, 91316, 91324, 91325, 91326, 91330, 91335, 91342, 91343, 91344, 91356, 91364, 91367, 91371, 91401, 91403, 91406, 91411, 91423, 91436, 91505, 91506, 91601, 91602, 91604, 91607, 91608, 93064
+        ],
+        description: ""
+    },
+    {
+        name: "Pete Aguilar",
+        locality: "Riverside Area",
+        result: true,
+        zip: [
+            91701, 91730, 91737, 91739, 91786, 92313, 92316, 92324, 92336, 92346, 92354, 92359, 92373, 92374, 92376, 92377, 92399, 92401, 92404, 92405, 92407, 92408, 92410, 92411
+        ],
+        description: ""
+    },
+    {
+        name: "Grace F. Napolitano",
+        locality: "Los Angeles Area",
+        result: true,
+        zip: [
+            90601, 90660, 91006, 91008, 91010, 91016, 91702, 91706, 91722, 91723, 91724, 91731, 91732, 91733, 91740, 91744, 91745, 91746, 91748, 91750, 91767, 91768, 91770, 91773, 91780, 91789, 91790, 91791, 91792
+        ],
+        description: ""
+    },
+    {
+        name: "Ted Lieu",
+        locality: "West LA Area",
+        result: true,
+        zip: [
+            90004, 90005, 90010, 90020, 90024, 90025, 90035, 90036, 90046, 90048, 90049, 90064, 90066, 90073, 90077, 90095, 90210, 90211, 90212, 90245, 90254, 90263, 90265, 90266, 90272, 90274, 90275, 90277, 90278, 90290, 90291, 90292, 90293, 90401, 90402, 90403, 90404, 90405, 90503, 90504, 90505, 90710, 90717, 90731, 90732, 90744, 91301, 91302, 91361, 91364
+        ],
+        description: "Congressman Ted W. Lieu represents California’s 33rd Congressional District in Southern California. Serving his second term in Congress, Ted has already made a significant impact in Washington. Ted has taken a leadership role in Congress on a number of vital policy issues, and the language from seven bills he introduced were signed into law."
+    },
+    {
+        name: "Jimmy Gomez",
+        locality: "Los Angeles",
+        result: true,
+        zip: [
+            90004, 90005, 90006, 90007, 90010, 90012, 90013, 90014, 90015, 90017, 90018, 90019, 90020, 90021, 90022, 90023, 90026, 90031, 90032, 90033, 90038, 90041, 90042, 90057, 90058, 90063, 90065, 90071, 90079, 90089, 90090, 91030, 91105, 91754
+        ],
+        description: ""
+    },
+    {
+        name: "Norma Torres",
+        locality: "LA / Riverside Areas (Chino, Fontana, Montclair, Ontario, Pomona, Rialto)",
+        result: true,
+        zip: [
+            91708, 91709, 91710, 91711, 91739, 91750, 91761, 91762, 91763, 91764, 91765, 91766, 91767, 91768, 91773, 91789, 92316, 92324, 92335, 92336, 92337, 92376, 92509, 92880
+        ],
+        description: ""
+    },
+    {
+        name: "Raul Ruiz",
+        locality: "East Riverside Area",
+        result: true,
+        zip: [
+            92201, 92203, 92210, 92211, 92220, 92223, 92225, 92230, 92234, 92236, 92239, 92240, 92241, 92253, 92254, 92258, 92260, 92262, 92264, 92270, 92274, 92276, 92277, 92282, 92320, 92373, 92399, 92536, 92539, 92543, 92544, 92545, 92549, 92561, 92567, 92582, 92583
+        ],
+        description: ""
+    },
+    {
+        name: "Karen Bass",
+        locality: "Los Angeles (Culver City, Inglewood, Los Angeles)",
+        result: true,
+        zip: [
+            90003, 90005, 90007, 90008, 90010, 90011, 90015, 90016, 90018, 90019, 90024, 90025, 90034, 90035, 90036, 90037, 90043, 90044, 90045, 90047, 90048, 90056, 90062, 90064, 90066, 90067, 90089, 90212, 90230, 90232, 90291, 90292, 90302, 90405
+        ],
+        description: ""
+    },
+    {
+        name: "Linda Sanchez",
+        locality: "Los Angeles Area",
+        result: true,
+        zip: [
+            90022, 90241, 90601, 90602, 90603, 90604, 90605, 90606, 90620, 90623, 90630, 90638, 90640, 90650, 90660, 90670, 90701, 90703, 90706, 90712, 90713, 90715, 90716, 90805, 91731, 91733, 91745, 91770
+        ],
+        description: ""
+    },
+    {
+        name: "Gil Cisneros",
+        locality: "Los Angeles Area",
+        result: true,
+        zip: [
+            90620, 90621, 90623, 90631, 90638, 91709, 91710, 91724, 91745, 91746, 91748, 91765, 91768, 91789, 92801, 92805, 92806, 92807, 92808, 92821, 92823, 92831, 92832, 92833, 92835, 92865, 92867, 92870, 92886, 92887
+        ],
+        description: ""
+    },
+    {
+        name: "Lucille Roybal-Allard",
+        locality: "Los Angeles Area",
+        result: true,
+        zip: [
+            90001, 90003, 90007, 90011, 90015, 90021, 90022, 90023, 90037, 90040, 90058, 90063, 90201, 90221, 90240, 90241, 90242, 90255, 90262, 90270, 90640, 90670, 90706, 90723, 91754
+        ],
+        description: ""
+    },
+    {
+        name: "Mark Takano",
+        locality: "Inland Empire (Eastvale, Jurupa Valley, Moreno Valley, Norco, Perris, Riverside)",
+        result: true,
+        zip: [
+            91752, 92223, 92320, 92324, 92373, 92501, 92503, 92504, 92505, 92506, 92507, 92508, 92509, 92518, 92551, 92553, 92555, 92557, 92570, 92571, 92585, 92586, 92587, 92860, 92879
+        ],
+        description: ""
+    },
+    {
+        name: "Liam O’Mara",
+        locality: "Riverside Area",
+        result: false,
+        zip: [
+            91752, 92223, 92373, 92503, 92504, 92505, 92506, 92508, 92530, 92532, 92536, 92543, 92544, 92545, 92548, 92555, 92562, 92563, 92567, 92570, 92571, 92582, 92584, 92585, 92586, 92587, 92590, 92591, 92592, 92595, 92596, 92860, 92879, 92880, 92881, 92882, 92883
+        ],
+        description: ""
+    },
+    {
+        name: "Maxine Waters",
+        locality: "South LA County",
+        result: true,
+        zip: [
+            90001, 90002, 90003, 90044, 90045, 90047, 90059, 90061, 90066, 90094, 90230, 90247, 90248, 90249, 90250, 90260, 90293, 90301, 90302, 90303, 90304, 90305, 90501, 90502, 90503, 90504, 90505, 90506, 90710, 90717, 90732
+        ],
+        description: ""
+    },
+    {
+        name: "Nanette Barragan",
+        locality: "South LA and Los Angeles Harbor Region",
+        result: true,
+        zip: [
+            90001, 90002, 90044, 90059, 90061, 90220, 90221, 90222, 90248, 90255, 90262, 90280, 90731, 90732, 90744, 90745, 90746, 90747, 90802, 90805, 90810, 90813
+        ],
+        description: ""
+    },
+    {
+        name: "Katie Porter",
+        locality: "Orange County",
+        result: true,
+        zip: [
+            92530, 92602, 92603, 92604, 92606, 92610, 92612, 92614, 92617, 92618, 92620, 92630, 92637, 92651, 92653, 92656, 92660, 92676, 92677, 92678, 92679, 92688, 92691, 92692, 92701, 92705, 92707, 92780, 92782, 92807, 92808, 92861, 92865, 92867, 92869, 92887
+        ],
+        description: ""
+    },
+    {
+        name: "Lou J. Correa",
+        locality: "Orange County",
+        result: true,
+        zip: [
+            90620, 90621, 90680, 92606, 92614, 92626, 92701, 92703, 92704, 92705, 92706, 92707, 92780, 92801, 92802, 92804, 92805, 92806, 92807, 92840, 92843, 92865, 92866, 92867, 92868, 92870
+        ],
+        description: ""
+    },
+    {
+        name: "Alan Lowenthal",
+        locality: "Orange County",
+        result: true,
+        zip: [
+            90620, 90623, 90630, 90680, 90704, 90712, 90713, 90720, 90731, 90740, 90755, 90802, 90803, 90804, 90805, 90806, 90807, 90808, 90810, 90813, 90814, 90815, 90822, 90831, 92647, 92655, 92683, 92703, 92804, 92840, 92841, 92843, 92844, 92845
+        ],
+        description: ""
+    },
+    {
+        name: "Harley Rouda",
+        locality: "LA / OC Area",
+        result: true,
+        zip: [
+            90720, 90740, 90742, 90743, 92603, 92612, 92614, 92617, 92625, 92626, 92627, 92629, 92637, 92646, 92647, 92648, 92649, 92651, 92653, 92655, 92656, 92657, 92660, 92661, 92662, 92663, 92675, 92677, 92683, 92703, 92704, 92707, 92708, 92843, 92844
+        ],
+        description: ""
+    },
+    {
+        name: "Mike Levin",
+        locality: "Oceanside, Vista, Carlsbad, Encinitas, and small part of south OC",
+        result: true,
+        zip: [
+            92003, 92007, 92008, 92009, 92010, 92011, 92014, 92024, 92028, 92029, 92037, 92054, 92055, 92056, 92057, 92058, 92067, 92075, 92078, 92081, 92083, 92084, 92091, 92121, 92127, 92130, 92624, 92629, 92651, 92672, 92673, 92675, 92677, 92679, 92688, 92691, 92692, 92694
+        ],
+        description: ""
+    },
+    {
+        name: "Ammar Campa-Najjar",
+        locality: "San Diego County (Fallbrook, San Marcos, Valley Center, Ramona, Escondido, Santee, Lakeside, parts of El Cajon)",
+        result: false,
+        zip: [
+            91901, 91905, 91914, 91916, 91931, 91935, 91941, 91948, 91962, 91978, 92003, 92004, 92009, 92019, 92020, 92021, 92025, 92026, 92027, 92028, 92029, 92036, 92040, 92059, 92060, 92061, 92064, 92065, 92066, 92069, 92070, 92071, 92078, 92082, 92084, 92086, 92562, 92590, 92591, 92592
+        ],
+        description: ""
+    },
+    {
+        name: "Juan Vargas",
+        locality: "Imperial County / South San Diego",
+        result: true,
+        zip: [
+            91901, 91902, 91905, 91906, 91910, 91911, 91914, 91915, 91917, 91931, 91932, 91934, 91935, 91945, 91950, 91962, 91963, 91980, 92004, 92019, 92101, 92102, 92104, 92105, 92113, 92114, 92115, 92118, 92139, 92154, 92173, 92222, 92225, 92227, 92231, 92233, 92243, 92249, 92250, 92251, 92257, 92259, 92266, 92273, 92274, 92275, 92281, 92283
+        ],
+        description: ""
+    },
+    {
+        name: "Scott Peters",
+        locality: "San Diego County (San Diego, La Jolla, Carmel Valley, Point Loma, Poway, Coronado)",
+        result: true,
+        zip: [
+            91932, 92014, 92025, 92027, 92029, 92037, 92064, 92065, 92067, 92071, 92075, 92101, 92106, 92107, 92108, 92109, 92110, 92111, 92113, 92117, 92118, 92119, 92120, 92121, 92122, 92123, 92124, 92126, 92127, 92128, 92129, 92130, 92131, 92132, 92135, 92140, 92145, 92147, 92155
+        ],
+        description: ""
+    },
+    {
+        name: "Georgette Gómez",
+        locality: "San Diego County (Bonita, La Mesa, Lemon Grove, and Spring Valley; parts of Chula Vista, El Cajon, and San Diego)",
+        result: false,
+        zip: [
+            91902, 91910, 91911, 91913, 91914, 91915, 91941, 91942, 91945, 91977, 91978, 92019, 92020, 92021, 92071, 92101, 92102, 92103, 92104, 92105, 92108, 92110, 92111, 92114, 92115, 92116, 92119, 92120, 92123, 92124, 92134, 92139, 92154
+        ],
+        description: ""
     }
+]
+
+// CA Assembly  _______________________________________________________________________________
+const AD = [{
+        name: "Elizabeth Betancourt",
+        locality: "",
+        result: false,
+        zip: [
+            89439, 95568, 95602, 95603, 95604, 95631, 95701, 95703, 95713, 95714, 95715, 95717, 95722, 95724, 95728, 95736, 95910, 95915, 95916, 95922, 95923, 95928, 95930, 95934, 95936, 95941, 95942, 95944, 95945, 95946, 95947, 95949, 95954, 95956, 95959, 95960, 95965, 95966, 95969, 95971, 95973, 95975, 95977, 95978, 95981, 95983, 95984, 95986, 96001, 96002, 96003, 96006, 96007, 96008, 96009, 96011, 96013, 96014, 96015, 96016, 96017, 96019, 96020, 96022, 96023, 96025, 96027, 96028, 96031, 96032, 96033, 96034, 96037, 96038, 96039, 96040, 96044, 96047, 96049, 96050, 96051, 96054, 96056, 96057, 96058, 96059, 96062, 96064, 96065, 96067, 96068, 96069, 96071, 96073, 96075, 96076, 96084, 96085, 96086, 96087, 96088, 96094, 96096, 96097, 96101, 96103, 96104, 96105, 96106, 96108, 96109, 96110, 96111, 96112, 96113, 96114, 96115, 96116, 96117, 96118, 96119, 96121, 96122, 96123, 96124, 96125, 96126, 96128, 96129, 96130, 96132, 96134, 96135, 96136, 96137, 96140, 96141, 96142, 96143, 96145, 96146, 96148, 96161, 97635
+        ],
+        description: ""
+    },
+    {
+        name: "Jim Wood",
+        locality: "",
+        result: true,
+        zip: [
+            94515, 94922, 94923, 95401, 95403, 95404, 95405, 95409, 95410, 95412, 95415, 95417, 95420, 95421, 95425, 95427, 95428, 95429, 95430, 95432, 95436, 95437, 95439, 95441, 95444, 95445, 95446, 95448, 95449, 95450, 95452, 95454, 95456, 95459, 95460, 95462, 95463, 95465, 95466, 95468, 95469, 95470, 95471, 95472, 95482, 95486, 95488, 95490, 95492, 95494, 95497, 95501, 95503, 95511, 95514, 95519, 95521, 95524, 95525, 95526, 95527, 95528, 95531, 95536, 95537, 95540, 95542, 95543, 95545, 95546, 95547, 95548, 95549, 95550, 95551, 95552, 95553, 95554, 95555, 95556, 95558, 95559, 95560, 95562, 95563, 95564, 95565, 95567, 95569, 95570, 95571, 95573, 95585, 95587, 95589, 95595, 96010, 96024, 96041, 96046, 96048, 96052, 96076, 96091, 96093
+        ],
+        description: ""
+    },
+    {
+        name: "James Henson",
+        locality: "",
+        result: false,
+        zip: [
+            95626, 95645, 95648, 95659, 95668, 95674, 95681, 95692, 95837, 95901, 95903, 95912, 95914, 95917, 95918, 95919, 95920, 95922, 95925, 95926, 95928, 95930, 95932, 95935, 95938, 95939, 95941, 95943, 95948, 95951, 95953, 95954, 95955, 95957, 95960, 95961, 95962, 95963, 95965, 95966, 95968, 95969, 95970, 95973, 95974, 95977, 95979, 95981, 95982, 95987, 95988, 95991, 95993, 96021, 96022, 96029, 96035, 96055, 96059, 96061, 96063, 96074, 96075, 96076, 96080, 96090, 96092
+        ],
+        description: ""
+    },
+    {
+        name: "Cecilia Aguiar-Curry",
+        locality: "",
+        result: false,
+        zip: [
+            94503, 94508, 94515, 94534, 94558, 94559, 94567, 94573, 94574, 94576, 94589, 94591, 94599, 94928, 94931, 94951, 94954, 95404, 95405, 95407, 95409, 95422, 95423, 95426, 95431, 95435, 95442, 95443, 95451, 95452, 95453, 95457, 95458, 95461, 95464, 95467, 95469, 95476, 95485, 95493, 95605, 95606, 95607, 95612, 95615, 95616, 95618, 95620, 95627, 95637, 95645, 95653, 95679, 95687, 95688, 95691, 95694, 95695, 95697, 95698, 95776, 95912, 95932, 95937, 95950, 95987
+        ],
+        description: ""
+    },
+    {
+        name: "No Candidate Filed",
+        locality: "",
+        result: false,
+        zip: [
+            89010, 93512, 93514, 93517, 93529, 93541, 93546, 93601, 93604, 93610, 93614, 93622, 93623, 93626, 93636, 93637, 93638, 93643, 93644, 93645, 93653, 93669, 95222, 95223, 95224, 95225, 95226, 95228, 95230, 95232, 95233, 95245, 95246, 95247, 95248, 95249, 95250, 95251, 95252, 95254, 95255, 95257, 95305, 95306, 95310, 95311, 95314, 95318, 95321, 95325, 95327, 95329, 95335, 95338, 95345, 95346, 95364, 95369, 95370, 95372, 95375, 95379, 95383, 95389, 95601, 95603, 95614, 95619, 95623, 95629, 95633, 95634, 95635, 95636, 95640, 95642, 95646, 95651, 95658, 95663, 95664, 95665, 95666, 95667, 95669, 95672, 95675, 95682, 95684, 95685, 95689, 95699, 95709, 95720, 95721, 95726, 95735, 95762, 96107, 96120, 96133, 96142, 96150, 96155
+        ],
+        description: ""
+    },
+    {
+        name: "Jackie Smith",
+        locality: "",
+        result: false,
+        zip: [
+            95602, 95603, 95610, 95626, 95628, 95630, 95648, 95650, 95658, 95661, 95662, 95663, 95664, 95668, 95670, 95672, 95677, 95678, 95681, 95682, 95742, 95746, 95747, 95762, 95765
+        ],
+        description: ""
+    },
+    {
+        name: "Kevin McCarty",
+        locality: "",
+        result: true,
+        zip: [
+            95605, 95618, 95620, 95621, 95626, 95660, 95673, 95691, 95811, 95814, 95815, 95816, 95817, 95818, 95819, 95820, 95821, 95822, 95823, 95824, 95825, 95826, 95828, 95829, 95833, 95834, 95835, 95837, 95838, 95841, 95842, 95843, 95864
+        ],
+        description: ""
+    },
+    {
+        name: "Ken Cooley",
+        locality: "",
+        result: true,
+        zip: [
+            95608, 95610, 95621, 95624, 95628, 95630, 95632, 95638, 95652, 95655, 95660, 95670, 95683, 95693, 95742, 95821, 95825, 95826, 95827, 95828, 95829, 95830, 95838, 95841, 95842, 95864
+        ],
+        description: ""
+    },
+    {
+        name: "James Cooper",
+        locality: "",
+        result: true,
+        zip: [
+            95220, 95240, 95242, 95258, 95615, 95624, 95632, 95639, 95690, 95693, 95757, 95758, 95822, 95823, 95824, 95828, 95829, 95830, 95831, 95832
+        ],
+        description: ""
+    },
+    {
+        name: "Marc Levine",
+        locality: "",
+        result: true,
+        zip: [
+            94901, 94903, 94904, 94920, 94922, 94924, 94925, 94928, 94929, 94930, 94931, 94933, 94937, 94938, 94939, 94940, 94941, 94945, 94946, 94947, 94949, 94950, 94951, 94952, 94954, 94956, 94957, 94960, 94963, 94964, 94965, 94970, 94971, 94972, 94973, 95401, 95404, 95405, 95407, 95472, 95476
+        ],
+        description: ""
+    },
+    {
+        name: "Jim Frazier",
+        locality: "",
+        result: true,
+        zip: [
+            94505, 94509, 94510, 94511, 94512, 94513, 94514, 94517, 94531, 94533, 94534, 94535, 94548, 94561, 94565, 94571, 94585, 94591, 95219, 95612, 95615, 95620, 95625, 95641, 95680, 95687, 95688, 95690
+        ],
+        description: ""
+    },
+    {
+        name: "Paul Akinjo",
+        locality: "",
+        result: false,
+        zip: [
+            95212, 95215, 95220, 95227, 95230, 95231, 95236, 95237, 95240, 95304, 95307, 95316, 95319, 95320, 95323, 95326, 95328, 95329, 95330, 95336, 95337, 95350, 95354, 95355, 95356, 95357, 95358, 95361, 95366, 95367, 95368, 95380, 95382, 95385, 95386, 95632
+        ],
+        description: ""
+    },
+    {
+        name: "Kathy Miller",
+        locality: "",
+        result: false,
+        zip: [
+            94550, 95202, 95203, 95204, 95205, 95206, 95207, 95209, 95210, 95211, 95212, 95215, 95219, 95220, 95231, 95234, 95240, 95242, 95304, 95336, 95376, 95377, 95385, 95391, 95632, 95641, 95686
+        ],
+        description: ""
+    },
+    {
+        name: "Timothy S. Grayson",
+        locality: "",
+        result: true,
+        zip: [
+            94505, 94506, 94507, 94510, 94513, 94514, 94517, 94518, 94519, 94520, 94521, 94523, 94525, 94528, 94534, 94547, 94549, 94551, 94553, 94563, 94564, 94565, 94569, 94572, 94588, 94589, 94590, 94591, 94592, 94596, 94597, 94598, 94803
+        ],
+        description: ""
+    },
+    {
+        name: "Buffy Wicks",
+        locality: "",
+        result: true,
+        zip: [
+            94530, 94547, 94553, 94564, 94572, 94602, 94608, 94609, 94610, 94611, 94618, 94619, 94702, 94703, 94704, 94705, 94706, 94707, 94708, 94709, 94710, 94720, 94801, 94803, 94804, 94805, 94806, 94850
+        ],
+        description: ""
+    },
+    {
+        name: "Rebecca Bauer-Kahan",
+        locality: "",
+        result: true,
+        zip: [
+            94505, 94506, 94507, 94514, 94516, 94526, 94528, 94549, 94550, 94551, 94556, 94563, 94566, 94568, 94575, 94582, 94583, 94586, 94588, 94595, 94596, 94597, 94598, 94611, 95377, 95391
+        ],
+        description: ""
+    },
+    {
+        name: "David Chiu",
+        locality: "",
+        result: true,
+        zip: [
+            94102, 94103, 94104, 94105, 94107, 94108, 94109, 94110, 94111, 94112, 94114, 94115, 94117, 94122, 94124, 94127, 94130, 94131, 94133, 94134, 94158
+        ],
+        description: ""
+    },
+    {
+        name: "Rob Bonta",
+        locality: "",
+        result: true,
+        zip: [
+            94501, 94502, 94546, 94577, 94578, 94579, 94580, 94601, 94602, 94603, 94605, 94606, 94607, 94608, 94609, 94610, 94611, 94612, 94613, 94619, 94621
+        ],
+        description: ""
+    },
+    {
+        name: "Phil Ting",
+        locality: "",
+        result: true,
+        zip: [
+            94005, 94014, 94015, 94080, 94109, 94112, 94115, 94116, 94117, 94118, 94121, 94122, 94123, 94127, 94129, 94131, 94132, 94134
+        ],
+        description: ""
+    },
+    {
+        name: "Bill Quirk",
+        locality: "",
+        result: true,
+        zip: [
+            94536, 94538, 94539, 94541, 94542, 94544, 94545, 94546, 94550, 94552, 94555, 94566, 94568, 94577, 94578, 94580, 94586, 94587, 94588, 94605, 94619
+        ],
+        description: ""
+    },
+    {
+        name: "Adam Gray",
+        locality: "",
+        result: true,
+        zip: [
+            93610, 93620, 93622, 93635, 93665, 95301, 95303, 95307, 95312, 95313, 95315, 95317, 95322, 95324, 95326, 95333, 95334, 95340, 95341, 95348, 95350, 95351, 95354, 95355, 95357, 95358, 95360, 95363, 95365, 95369, 95374, 95380, 95382, 95385, 95387, 95388
+        ],
+        description: ""
+    },
+    {
+        name: "Kevin Mullin",
+        locality: "",
+        result: true,
+        zip: [
+            94002, 94005, 94010, 94019, 94030, 94037, 94038, 94044, 94061, 94062, 94063, 94065, 94066, 94070, 94080, 94128, 94401, 94402, 94403, 94404
+        ],
+        description: ""
+    },
+    {
+        name: "No Endorsement",
+        locality: "",
+        result: false,
+        zip: [
+            93221, 93244, 93262, 93265, 93271, 93286, 93292, 93602, 93603, 93605, 93611, 93612, 93615, 93616, 93619, 93621, 93626, 93628, 93633, 93634, 93641, 93646, 93647, 93650, 93651, 93654, 93657, 93664, 93667, 93675, 93704, 93705, 93706, 93710, 93711, 93720, 93722, 93723, 93725, 93726, 93727, 93730
+        ],
+        description: ""
+    },
+    {
+        name: "Marc Berman",
+        locality: "",
+        result: true,
+        zip: [
+            94010, 94019, 94020, 94021, 94022, 94024, 94025, 94027, 94028, 94040, 94041, 94043, 94060, 94061, 94062, 94063, 94074, 94085, 94086, 94087, 94089, 94301, 94303, 94304, 94305, 94306, 95002, 95014, 95033, 95051
+        ],
+        description: ""
+    },
+    {
+        name: "Alex Lee",
+        locality: "",
+        result: false,
+        zip: [
+            94086, 94089, 94536, 94538, 94539, 94550, 94560, 95002, 95035, 95037, 95050, 95051, 95053, 95054, 95110, 95112, 95116, 95117, 95126, 95127, 95131, 95132, 95133, 95134, 95135, 95138, 95140, 95148
+        ],
+        description: ""
+    },
+    {
+        name: "Drew Phelps",
+        locality: "",
+        result: false,
+        zip: [
+            89019, 89060, 89061, 92328, 92384, 92389, 93201, 93205, 93207, 93208, 93212, 93215, 93218, 93219, 93220, 93221, 93223, 93226, 93235, 93238, 93240, 93244, 93247, 93255, 93256, 93257, 93258, 93260, 93261, 93265, 93267, 93270, 93272, 93274, 93277, 93283, 93285, 93286, 93287, 93291, 93292, 93306, 93308, 93513, 93514, 93518, 93522, 93526, 93527, 93530, 93545, 93549, 93592, 93615, 93618, 93619, 93631, 93646, 93647, 93654, 93666, 93673
+        ],
+        description: ""
+    },
+    {
+        name: "Ash Kalra",
+        locality: "",
+        result: true,
+        zip: [
+            95110, 95111, 95112, 95113, 95116, 95121, 95122, 95123, 95125, 95126, 95127, 95135, 95136, 95138, 95148
+        ],
+        description: ""
+    },
+    {
+        name: "Evan Low",
+        locality: "",
+        result: true,
+        zip: [
+            94087, 95008, 95014, 95030, 95032, 95033, 95050, 95051, 95070, 95110, 95117, 95118, 95120, 95123, 95124, 95125, 95126, 95128, 95129, 95130, 95136
+        ],
+        description: ""
+    },
+    {
+        name: "Mark Stone",
+        locality: "",
+        result: true,
+        zip: [
+            93906, 93907, 93908, 93921, 93923, 93924, 93933, 93940, 93943, 93950, 93953, 93955, 95003, 95004, 95005, 95006, 95007, 95010, 95012, 95013, 95017, 95018, 95030, 95032, 95033, 95037, 95039, 95041, 95060, 95062, 95064, 95065, 95066, 95073, 95076, 95119, 95120, 95123, 95139
+        ],
+        description: ""
+    },
+    {
+        name: "Robert Rivas",
+        locality: "",
+        result: true,
+        zip: [
+            93210, 93426, 93450, 93451, 93461, 93901, 93905, 93906, 93907, 93908, 93920, 93923, 93924, 93925, 93926, 93927, 93928, 93930, 93932, 93954, 93960, 93962, 95004, 95019, 95020, 95023, 95037, 95043, 95045, 95046, 95075, 95076
+        ],
+        description: ""
+    },
+    {
+        name: "Joaquin Arambula",
+        locality: "",
+        result: true,
+        zip: [
+            93210, 93234, 93242, 93606, 93608, 93609, 93616, 93618, 93620, 93622, 93624, 93625, 93627, 93630, 93631, 93640, 93646, 93648, 93652, 93654, 93656, 93657, 93660, 93662, 93668, 93701, 93702, 93703, 93704, 93705, 93706, 93721, 93722, 93723, 93725, 93726, 93727, 93728
+        ],
+        description: ""
+    },
+    {
+        name: "Rudy Salas",
+        locality: "",
+        result: true,
+        zip: [
+            93201, 93202, 93203, 93204, 93206, 93212, 93215, 93220, 93230, 93239, 93241, 93242, 93245, 93249, 93250, 93251, 93263, 93266, 93280, 93304, 93305, 93306, 93307, 93308, 93311, 93313, 93314, 93461, 93631, 93656
+        ],
+        description: ""
+    },
+    {
+        name: "No Consensus",
+        locality: "",
+        result: false,
+        zip: [
+            89019, 92242, 92267, 92268, 92277, 92280, 92284, 92285, 92301, 92304, 92305, 92307, 92308, 92309, 92310, 92311, 92314, 92315, 92321, 92322, 92325, 92327, 92332, 92333, 92338, 92339, 92341, 92342, 92344, 92345, 92346, 92347, 92352, 92356, 92359, 92363, 92364, 92365, 92368, 92371, 92378, 92382, 92385, 92386, 92391, 92392, 92394, 92395, 92398, 92399, 92404, 93516, 93555, 93558, 93562
+        ],
+        description: ""
+    },
+    {
+        name: "Julie Solis",
+        locality: "",
+        result: false,
+        zip: [
+            93203, 93205, 93206, 93220, 93222, 93224, 93225, 93243, 93249, 93251, 93252, 93255, 93268, 93276, 93283, 93301, 93304, 93305, 93306, 93307, 93308, 93309, 93311, 93312, 93313, 93314, 93501, 93518, 93519, 93527, 93528, 93531, 93554, 93555, 93560, 93561
+        ],
+        description: ""
+    },
+    {
+        name: "Dawn Addis",
+        locality: "",
+        result: false,
+        zip: [
+            93252, 93254, 93401, 93402, 93405, 93410, 93420, 93422, 93424, 93426, 93428, 93429, 93430, 93432, 93433, 93434, 93436, 93437, 93440, 93441, 93442, 93444, 93445, 93446, 93449, 93451, 93452, 93453, 93454, 93455, 93458, 93461, 93465
+        ],
+        description: ""
+    },
+    {
+        name: "No Endorsement",
+        locality: "",
+        result: false,
+        zip: [
+            91042, 91350, 91351, 91354, 91384, 91387, 91390, 92371, 92372, 92397, 93243, 93252, 93501, 93505, 93510, 93516, 93519, 93523, 93524, 93532, 93534, 93535, 93536, 93543, 93544, 93550, 93551, 93552, 93553, 93560, 93563, 93591
+        ],
+        description: ""
+    },
+    {
+        name: "Steve Bennett",
+        locality: "",
+        result: false,
+        zip: [
+            91384, 93001, 93003, 93004, 93010, 93013, 93015, 93021, 93022, 93023, 93030, 93035, 93036, 93040, 93042, 93060, 93063, 93066, 93067, 93101, 93103, 93105, 93108, 93109, 93110, 93111, 93117, 93225, 93243, 93252, 93254, 93427, 93436, 93440, 93441, 93454, 93455, 93460, 93463
+        ],
+        description: ""
+    },
+    {
+        name: "No Endorsement",
+        locality: "",
+        result: false,
+        zip: [
+            91304, 91307, 91311, 91321, 91324, 91325, 91326, 91342, 91344, 91350, 91351, 91354, 91355, 91362, 91381, 91384, 91387, 91390, 93021, 93063, 93064, 93065, 93532
+        ],
+        description: ""
+    },
+    {
+        name: "Luz Rivas",
+        locality: "",
+        result: true,
+        zip: [
+            91040, 91042, 91214, 91321, 91331, 91340, 91342, 91344, 91345, 91352, 91387, 91390, 91402, 91504, 91505, 91601, 91602, 91605, 91606, 91607
+        ],
+        description: ""
+    },
+    {
+        name: "James Ramos",
+        locality: "",
+        result: true,
+        zip: [
+            91701, 91730, 91737, 91739, 91759, 92324, 92325, 92336, 92345, 92346, 92354, 92358, 92359, 92371, 92373, 92374, 92397, 92399, 92404, 92405, 92407, 92408, 92410, 92411
+        ],
+        description: ""
+    },
+    {
+        name: "Chris Holden",
+        locality: "",
+        result: true,
+        zip: [
+            90042, 91001, 91011, 91016, 91024, 91030, 91101, 91103, 91104, 91105, 91106, 91107, 91108, 91701, 91702, 91711, 91724, 91737, 91740, 91741, 91750, 91759, 91767, 91768, 91773, 91784, 91786, 93543, 93550, 93553, 93563
+        ],
+        description: ""
+    },
+    {
+        name: "No Endorsement",
+        locality: "",
+        result: false,
+        zip: [
+            92203, 92210, 92211, 92220, 92223, 92230, 92234, 92240, 92241, 92252, 92253, 92256, 92258, 92260, 92262, 92264, 92268, 92270, 92274, 92277, 92278, 92282, 92284, 92285, 92320, 92339, 92359, 92373, 92374, 92399, 92543, 92544, 92545, 92549, 92555, 92567, 92582, 92583
+        ],
+        description: ""
+    },
+    {
+        name: "Laura Friedman",
+        locality: "",
+        result: true,
+        zip: [
+            90004, 90026, 90027, 90028, 90029, 90038, 90039, 90068, 91011, 91020, 91042, 91046, 91103, 91201, 91202, 91203, 91204, 91205, 91206, 91207, 91208, 91210, 91214, 91342, 91352, 91501, 91502, 91504, 91505, 91506, 91601, 91605, 93510, 93550
+        ],
+        description: ""
+    },
+    {
+        name: "Jacqui Irwin",
+        locality: "",
+        result: true,
+        zip: [
+            90265, 91320, 91360, 91361, 91362, 91377, 93010, 93012, 93021, 93030, 93033, 93035, 93036, 93041, 93043, 93065
+        ],
+        description: ""
+    },
+    {
+        name: "Jesse Gabriel",
+        locality: "",
+        result: true,
+        zip: [
+            90049, 90272, 90290, 91301, 91302, 91303, 91304, 91306, 91307, 91311, 91316, 91324, 91325, 91330, 91335, 91343, 91356, 91364, 91367, 91371, 91403, 91406, 91411, 91436
+        ],
+        description: ""
+    },
+    {
+        name: "Adrin Nazarian",
+        locality: "",
+        result: true,
+        zip: [
+            90046, 90068, 90077, 90210, 91325, 91331, 91343, 91344, 91345, 91401, 91402, 91403, 91405, 91406, 91411, 91423, 91601, 91602, 91604, 91605, 91606, 91607, 91608
+        ],
+        description: ""
+    },
+    {
+        name: "Eloise Reyes",
+        locality: "",
+        result: true,
+        zip: [
+            91739, 92313, 92316, 92324, 92335, 92336, 92337, 92376, 92377, 92401, 92407, 92408, 92410, 92411, 92509
+        ],
+        description: ""
+    },
+    {
+        name: "Blanca Rubio",
+        locality: "",
+        result: true,
+        zip: [
+            91006, 91008, 91010, 91016, 91702, 91706, 91722, 91723, 91724, 91731, 91732, 91733, 91740, 91741, 91744, 91746, 91773, 91790, 91791, 91792
+        ],
+        description: ""
+    },
+    {
+        name: "Ed Chau",
+        locality: "",
+        result: true,
+        zip: [
+            90022, 90640, 91006, 91007, 91030, 91108, 91731, 91732, 91733, 91754, 91755, 91770, 91775, 91776, 91780, 91801, 91803
+        ],
+        description: ""
+    },
+    {
+        name: "Richard Bloom",
+        locality: "",
+        result: true,
+        zip: [
+            90004, 90005, 90010, 90019, 90020, 90025, 90028, 90035, 90036, 90038, 90046, 90048, 90049, 90064, 90067, 90068, 90069, 90077, 90210, 90211, 90212, 90263, 90265, 90272, 90290, 90291, 90401, 90402, 90403, 90404, 90405, 91301, 91302, 91361, 91364
+        ],
+        description: ""
+    },
+    {
+        name: "Wendy Carrillo",
+        locality: "",
+        result: true,
+        zip: [
+            90004, 90012, 90017, 90022, 90023, 90026, 90029, 90031, 90032, 90033, 90039, 90040, 90041, 90042, 90057, 90063, 90065, 90089, 90090, 90640, 91030, 91105, 91754
+        ],
+        description: ""
+    },
+    {
+        name: "Freddie Rodriguez",
+        locality: "",
+        result: true,
+        zip: [
+            91708, 91709, 91710, 91711, 91739, 91750, 91761, 91762, 91763, 91764, 91765, 91766, 91767, 91768, 91773, 91789, 92335, 92337, 92880
+        ],
+        description: ""
+    },
+    {
+        name: "Miguel Santiago",
+        locality: "",
+        result: true,
+        zip: [
+            90004, 90005, 90006, 90007, 90010, 90012, 90013, 90014, 90015, 90017, 90018, 90019, 90020, 90021, 90023, 90029, 90033, 90038, 90040, 90057, 90058, 90063, 90071, 90079, 90201, 90255, 90270
+        ],
+        description: ""
+    },
+    {
+        name: "Sydney Kamlager-Dove",
+        locality: "",
+        result: true,
+        zip: [
+            90008, 90016, 90018, 90019, 90024, 90025, 90034, 90035, 90043, 90045, 90047, 90049, 90056, 90062, 90064, 90066, 90067, 90073, 90095, 90230, 90232, 90292, 90302, 90405
+        ],
+        description: ""
+    },
+    {
+        name: "Andrew Rodriguez",
+        locality: "",
+        result: false,
+        zip: [
+            90631, 91709, 91710, 91724, 91744, 91748, 91765, 91768, 91773, 91789, 91791, 91792, 92806, 92807, 92808, 92821, 92823, 92835, 92870, 92886, 92887
+        ],
+        description: ""
+    },
+    {
+        name: "Eduardo Garcia",
+        locality: "",
+        result: true,
+        zip: [
+            92004, 92201, 92203, 92211, 92222, 92225, 92227, 92231, 92233, 92234, 92236, 92239, 92240, 92241, 92243, 92249, 92250, 92251, 92253, 92254, 92257, 92258, 92259, 92264, 92266, 92270, 92273, 92274, 92275, 92276, 92277, 92281, 92282, 92283
+        ],
+        description: ""
+    },
+    {
+        name: "Lisa Calderon",
+        locality: "",
+        result: false,
+        zip: [
+            90240, 90241, 90601, 90602, 90603, 90604, 90605, 90606, 90631, 90638, 90650, 90660, 90670, 90703, 91706, 91732, 91733, 91744, 91745, 91746, 91748, 91770, 91789, 91792
+        ],
+        description: ""
+    },
+    {
+        name: "Cristina Garcia",
+        locality: "",
+        result: true,
+        zip: [
+            90022, 90023, 90040, 90058, 90201, 90240, 90241, 90242, 90270, 90601, 90606, 90623, 90640, 90650, 90660, 90670, 90701, 90703, 90706, 90723, 91733
+        ],
+        description: ""
+    },
+    {
+        name: "Reggie Jones-Sawyer",
+        locality: "",
+        result: true,
+        zip: [
+            90001, 90002, 90003, 90007, 90011, 90015, 90018, 90021, 90037, 90044, 90047, 90058, 90062, 90089, 90255
+        ],
+        description: ""
+    },
+    {
+        name: "Sabrina Cervantes",
+        locality: "",
+        result: true,
+        zip: [
+            91752, 92503, 92504, 92505, 92509, 92860, 92879, 92880, 92881, 92882, 92883
+        ],
+        description: ""
+    },
+    {
+        name: "Jose Medina",
+        locality: "",
+        result: true,
+        zip: [
+            92324, 92501, 92503, 92504, 92506, 92507, 92508, 92518, 92551, 92553, 92555, 92557, 92567, 92570, 92571, 92585, 92586, 92587
+        ],
+        description: ""
+    },
+    {
+        name: "Autumn Burke",
+        locality: "",
+        result: true,
+        zip: [
+            90043, 90044, 90045, 90047, 90066, 90094, 90230, 90245, 90247, 90249, 90250, 90260, 90266, 90291, 90292, 90293, 90301, 90302, 90303, 90304, 90305, 90504
+        ],
+        description: ""
+    },
+    {
+        name: "Anthony Rendon",
+        locality: "",
+        result: true,
+        zip: [
+            90002, 90040, 90058, 90059, 90201, 90221, 90222, 90255, 90262, 90270, 90280, 90630, 90703, 90712, 90713, 90715, 90716, 90723, 90805, 90807, 90808
+        ],
+        description: ""
+    },
+    {
+        name: "Mike Gipson",
+        locality: "",
+        result: true,
+        zip: [
+            90002, 90003, 90044, 90059, 90061, 90220, 90221, 90222, 90247, 90248, 90262, 90501, 90502, 90744, 90745, 90746, 90747, 90805, 90810
+        ],
+        description: ""
+    },
+    {
+        name: "Sharon Quirk-Silva",
+        locality: "",
+        result: true,
+        zip: [
+            90620, 90621, 90623, 90630, 90631, 90638, 90680, 90720, 92801, 92802, 92804, 92805, 92806, 92821, 92831, 92832, 92833, 92835, 92841, 92844, 92870
+        ],
+        description: ""
+    },
+    {
+        name: "Al Muratsuchi",
+        locality: "",
+        result: true,
+        zip: [
+            90247, 90248, 90249, 90250, 90254, 90260, 90266, 90274, 90275, 90277, 90278, 90501, 90502, 90503, 90504, 90505, 90506, 90710, 90717, 90732, 90744
+        ],
+        description: ""
+    },
+    {
+        name: "Jerry Carlos",
+        locality: "",
+        result: false,
+        zip: [
+            92503, 92504, 92506, 92508, 92530, 92532, 92543, 92544, 92545, 92548, 92562, 92563, 92567, 92570, 92582, 92584, 92585, 92586, 92587, 92590, 92592, 92595, 92596, 92881, 92883
+        ],
+        description: ""
+    },
+    {
+        name: "Melissa Fox",
+        locality: "",
+        result: false,
+        zip: [
+            92602, 92604, 92606, 92610, 92618, 92620, 92630, 92676, 92679, 92691, 92701, 92705, 92780, 92782, 92806, 92807, 92808, 92861, 92865, 92866, 92867, 92868, 92869, 92870, 92886, 92887
+        ],
+        description: ""
+    },
+    {
+        name: "Tom Daly",
+        locality: "",
+        result: true,
+        zip: [
+            92606, 92614, 92626, 92701, 92703, 92704, 92705, 92706, 92707, 92780, 92801, 92802, 92805, 92806, 92840, 92843, 92866, 92868
+        ],
+        description: ""
+    },
+    {
+        name: "Patrick O'Donnell",
+        locality: "",
+        result: true,
+        zip: [
+            90704, 90713, 90731, 90732, 90740, 90744, 90755, 90802, 90803, 90804, 90805, 90806, 90807, 90808, 90810, 90813, 90814, 90815, 90822, 90831
+        ],
+        description: ""
+    },
+    {
+        name: "Elizabeth Lavertu",
+        locality: "",
+        result: false,
+        zip: [
+
+            91901, 91905, 91906, 91914, 91916, 91917, 91931, 91934, 91935, 91941, 91945, 91948, 91962, 91963, 91977, 91978, 91980, 92004, 92019, 92020, 92021, 92025, 92027, 92036, 92040, 92060, 92064, 92065, 92066, 92070, 92071, 92086, 92220, 92260, 92274, 92536, 92539, 92543, 92544, 92549, 92561, 92583, 92591, 92592, 92596
+        ],
+        description: ""
+    },
+    {
+        name: "Diedre “Thu-Ha” Nguyen",
+        locality: "",
+        result: false,
+        zip: [
+            90630, 90680, 90720, 90740, 90742, 90743, 90808, 90815, 92646, 92647, 92648, 92649, 92655, 92683, 92703, 92704, 92708, 92804, 92840, 92841, 92843, 92844, 92845
+        ],
+        description: ""
+    },
+    {
+        name: "Scott Rhinehart",
+        locality: "",
+        result: false,
+        zip: [
+
+            92530, 92624, 92629, 92630, 92637, 92651, 92653, 92656, 92672, 92673, 92675, 92676, 92677, 92678, 92679, 92688, 92691, 92692, 92694
+        ],
+        description: ""
+    },
+    {
+        name: "Cottie Petrie-Norris",
+        locality: "",
+        result: true,
+        zip: [
+            92603, 92604, 92606, 92612, 92614, 92617, 92618, 92625, 92626, 92627, 92629, 92637, 92646, 92648, 92651, 92653, 92656, 92657, 92660, 92661, 92662, 92663, 92677, 92704, 92705, 92707, 92782
+        ],
+        description: ""
+    },
+    {
+        name: "Karen Schwartz-Frates",
+        locality: "",
+        result: false,
+        zip: [
+            92003, 92009, 92024, 92025, 92026, 92027, 92028, 92029, 92057, 92059, 92060, 92061, 92065, 92067, 92069, 92070, 92078, 92082, 92083, 92084, 92086, 92091, 92562, 92563, 92590, 92591, 92592, 92596
+        ],
+        description: ""
+    },
+    {
+        name: "Tasha Boerner Horvath",
+        locality: "",
+        result: true,
+        zip: [
+            92003, 92007, 92008, 92009, 92010, 92011, 92024, 92028, 92029, 92054, 92055, 92056, 92057, 92058, 92067, 92075, 92078, 92081, 92083, 92084, 92091, 92672
+        ],
+        description: ""
+    },
+    {
+        name: "Brian Maienschein",
+        locality: "",
+        result: true,
+        zip: [
+            92014, 92024, 92025, 92027, 92029, 92064, 92065, 92067, 92071, 92091, 92109, 92111, 92117, 92119, 92120, 92121, 92122, 92123, 92124, 92126, 92127, 92128, 92129, 92130, 92131, 92145
+        ],
+        description: ""
+    },
+    {
+        name: "Chris Ward",
+        locality: "",
+        result: false,
+        zip: [
+            91932, 92014, 92037, 92075, 92101, 92102, 92103, 92104, 92105, 92106, 92107, 92108, 92109, 92110, 92111, 92113, 92115, 92116, 92117, 92118, 92121, 92122, 92132, 92134, 92135, 92140, 92147, 92154, 92155
+        ],
+        description: ""
+    },
+    {
+        name: "Shirley Weber",
+        locality: "",
+        result: true,
+        zip: [
+            91902, 91910, 91911, 91913, 91914, 91915, 91941, 91942, 91945, 91950, 91977, 92020, 92102, 92105, 92108, 92111, 92113, 92114, 92115, 92116, 92119, 92120, 92123, 92124, 92139, 92154
+        ],
+        description: ""
+    },
+    {
+        name: "Lorena Gonzalez Fletcher",
+        locality: "",
+        result: true,
+        zip: [
+            91902, 91910, 91911, 91913, 91932, 91950, 92101, 92102, 92104, 92105, 92113, 92115, 92139, 92154, 92173
+        ],
+        description: ""
+    }
+];
+
+// CA State Senate __________________________________________________________________________
+
+const SD = [{
+        name: "Pamela Swartz",
+        locality: "",
+        result: false,
+        zip: [
+            89439, 95568, 95602, 95603, 95604, 95631, 95701, 95703, 95713, 95714, 95715, 95717, 95722, 95724, 95728, 95736, 95910, 95915, 95916, 95922, 95923, 95928, 95930, 95934, 95936, 95941, 95942, 95944, 95945, 95946, 95947, 95949, 95954, 95956, 95959, 95960, 95965, 95966, 95969, 95971, 95973, 95975, 95977, 95978, 95981, 95983, 95984, 95986, 96001, 96002, 96003, 96006, 96007, 96008, 96009, 96011, 96013, 96014, 96015, 96016, 96017, 96019, 96020, 96022, 96023, 96025, 96027, 96028, 96031, 96032, 96033, 96034, 96037, 96038, 96039, 96040, 96044, 96047, 96049, 96050, 96051, 96054, 96056, 96057, 96058, 96059, 96062, 96064, 96065, 96067, 96068, 96069, 96071, 96073, 96075, 96076, 96084, 96085, 96086, 96087, 96088, 96094, 96096, 96097, 96101, 96103, 96104, 96105, 96106, 96108, 96109, 96110, 96111, 96112, 96113, 96114, 96115, 96116, 96117, 96118, 96119, 96121, 96122, 96123, 96124, 96125, 96126, 96128, 96129, 96130, 96132, 96134, 96135, 96136, 96137, 96140, 96141, 96142, 96143, 96145, 96146, 96148, 96161, 97635
+        ],
+        description: ""
+    },
+    {
+        name: "",
+        locality: "",
+        result: true,
+        zip: [
+            94515, 94901, 94903, 94904, 94920, 94922, 94923, 94924, 94925, 94928, 94929, 94930, 94931, 94933, 94937, 94938, 94939, 94940, 94941, 94945, 94946, 94947, 94949, 94950, 94952, 94956, 94957, 94960, 94963, 94964, 94965, 94970, 94971, 94972, 94973, 95401, 95403, 95404, 95405, 95407, 95409, 95410, 95412, 95415, 95417, 95420, 95421, 95422, 95423, 95425, 95426, 95427, 95428, 95429, 95430, 95431, 95432, 95435, 95436, 95437, 95439, 95441, 95442, 95443, 95444, 95445, 95446, 95448, 95449, 95450, 95451, 95452, 95453, 95454, 95456, 95457, 95458, 95459, 95460, 95461, 95462, 95463, 95464, 95465, 95466, 95467, 95468, 95469, 95470, 95471, 95472, 95476, 95482, 95485, 95486, 95488, 95490, 95492, 95493, 95494, 95497, 95501, 95503, 95511, 95514, 95519, 95521, 95524, 95525, 95526, 95527, 95528, 95531, 95536, 95537, 95540, 95542, 95543, 95545, 95546, 95547, 95548, 95549, 95550, 95551, 95552, 95553, 95554, 95555, 95556, 95558, 95559, 95560, 95562, 95563, 95564, 95565, 95567, 95569, 95570, 95571, 95573, 95585, 95587, 95589, 95595, 96010, 96024, 96041, 96046, 96048, 96052, 96076, 96091, 96093
+        ],
+        description: ""
+    },
+    {
+        name: "Bill Dodd",
+        locality: "",
+        result: true,
+        zip: [
+            94503, 94508, 94510, 94512, 94515, 94518, 94520, 94523, 94525, 94533, 94534, 94535, 94549, 94553, 94558, 94559, 94567, 94569, 94571, 94572, 94573, 94574, 94576, 94585, 94589, 94590, 94591, 94592, 94597, 94599, 94928, 94931, 94951, 94952, 94954, 95404, 95407, 95442, 95476, 95605, 95606, 95607, 95612, 95615, 95616, 95618, 95620, 95625, 95627, 95632, 95637, 95639, 95641, 95645, 95653, 95679, 95680, 95687, 95688, 95690, 95691, 95694, 95695, 95697, 95698, 95757, 95758, 95776, 95823, 95831, 95832, 95912, 95937
+        ],
+        description: ""
+    },
+    {
+        name: "",
+        locality: "",
+        result: true,
+        zip: [
+            95608, 95610, 95621, 95626, 95628, 95645, 95648, 95659, 95660, 95661, 95668, 95670, 95673, 95674, 95677, 95678, 95681, 95692, 95746, 95747, 95765, 95827, 95837, 95841, 95842, 95843, 95901, 95903, 95912, 95914, 95916, 95917, 95918, 95919, 95920, 95922, 95925, 95926, 95928, 95930, 95932, 95935, 95938, 95939, 95941, 95942, 95943, 95948, 95950, 95951, 95953, 95954, 95955, 95957, 95960, 95961, 95962, 95963, 95965, 95966, 95968, 95969, 95970, 95973, 95974, 95977, 95978, 95979, 95981, 95982, 95987, 95988, 95991, 95993, 96021, 96022, 96029, 96035, 96055, 96059, 96061, 96063, 96074, 96075, 96076, 96080, 96090, 96092
+        ],
+        description: ""
+    },
+    {
+        name: "Susan Eggman",
+        locality: "",
+        result: false,
+        zip: [
+            95202, 95203, 95204, 95205, 95206, 95207, 95209, 95210, 95211, 95212, 95215, 95219, 95220, 95227, 95230, 95231, 95234, 95236, 95237, 95240, 95242, 95258, 95304, 95319, 95320, 95330, 95336, 95337, 95350, 95351, 95354, 95355, 95356, 95357, 95358, 95361, 95366, 95367, 95368, 95376, 95377, 95385, 95391, 95632, 95641, 95686
+        ],
+        description: ""
+    },
+    {
+        name: "",
+        locality: "",
+        result: true,
+        zip: [
+            95605, 95608, 95618, 95620, 95624, 95626, 95652, 95660, 95673, 95691, 95757, 95758, 95811, 95814, 95815, 95816, 95817, 95818, 95819, 95820, 95821, 95822, 95823, 95824, 95825, 95826, 95827, 95828, 95829, 95830, 95831, 95832, 95833, 95834, 95835, 95837, 95838, 95841, 95842, 95864
+        ],
+        description: ""
+    },
+    {
+        name: "Steve Glazer",
+        locality: "",
+        result: true,
+        zip: [
+            94505, 94506, 94507, 94509, 94511, 94513, 94514, 94516, 94517, 94518, 94519, 94520, 94521, 94523, 94526, 94528, 94531, 94539, 94548, 94549, 94550, 94551, 94552, 94553, 94556, 94561, 94563, 94565, 94566, 94568, 94575, 94582, 94583, 94586, 94588, 94595, 94596, 94597, 94598, 94611, 94705, 95219, 95377, 95391
+        ],
+        description: ""
+    },
+    {
+        name: "",
+        locality: "",
+        result: true,
+        zip: [
+            89010, 89019, 89060, 89061, 92328, 92384, 92389, 93244, 93262, 93265, 93271, 93286, 93512, 93513, 93514, 93517, 93522, 93526, 93527, 93529, 93530, 93541, 93545, 93546, 93549, 93592, 93601, 93602, 93603, 93604, 93605, 93610, 93611, 93612, 93614, 93616, 93619, 93621, 93623, 93626, 93628, 93633, 93634, 93636, 93638, 93641, 93643, 93644, 93645, 93646, 93647, 93650, 93651, 93653, 93654, 93657, 93664, 93667, 93669, 93675, 93702, 93703, 93704, 93705, 93706, 93710, 93711, 93720, 93722, 93723, 93725, 93726, 93727, 93728, 93730, 95222, 95223, 95224, 95225, 95226, 95228, 95230, 95232, 95233, 95245, 95246, 95247, 95248, 95249, 95250, 95251, 95252, 95254, 95255, 95257, 95305, 95306, 95307, 95310, 95311, 95313, 95314, 95316, 95318, 95319, 95321, 95323, 95325, 95326, 95327, 95328, 95329, 95335, 95338, 95345, 95346, 95354, 95355, 95357, 95358, 95361, 95364, 95369, 95370, 95372, 95375, 95379, 95380, 95382, 95383, 95386, 95389, 95601, 95624, 95629, 95632, 95638, 95640, 95642, 95646, 95655, 95665, 95666, 95669, 95670, 95675, 95683, 95685, 95689, 95693, 95699, 95742, 95827, 95830, 96107, 96133
+        ],
+        description: ""
+    },
+    {
+        name: "Nancy Skinner",
+        locality: "",
+        result: true,
+        zip: [
+            94501, 94502, 94525, 94530, 94546, 94547, 94553, 94563, 94564, 94572, 94577, 94578, 94579, 94580, 94601, 94602, 94603, 94605, 94606, 94607, 94608, 94609, 94610, 94611, 94612, 94613, 94618, 94619, 94621, 94702, 94703, 94704, 94705, 94706, 94707, 94708, 94709, 94710, 94720, 94801, 94803, 94804, 94805, 94806, 94850
+        ],
+        description: ""
+    },
+    {
+        name: "",
+        locality: "",
+        result: true,
+        zip: [
+            94086, 94089, 94536, 94538, 94539, 94541, 94542, 94544, 94545, 94546, 94552, 94555, 94560, 94568, 94577, 94578, 94580, 94586, 94587, 94588, 94605, 94619, 95002, 95035, 95050, 95051, 95053, 95054, 95110, 95112, 95117, 95126, 95127, 95128, 95131, 95132, 95133, 95134
+        ],
+        description: ""
+    },
+    {
+        name: "Scott Wiener",
+        locality: "",
+        result: true,
+        zip: [
+            94014, 94015, 94080, 94102, 94103, 94104, 94105, 94107, 94108, 94109, 94110, 94111, 94112, 94114, 94115, 94116, 94117, 94118, 94121, 94122, 94123, 94124, 94127, 94129, 94130, 94131, 94132, 94133, 94134, 94158
+        ],
+        description: ""
+    },
+    {
+        name: "",
+        locality: "",
+        result: true,
+        zip: [
+            93210, 93234, 93242, 93606, 93608, 93609, 93610, 93620, 93622, 93624, 93625, 93627, 93630, 93631, 93635, 93636, 93637, 93638, 93640, 93652, 93654, 93656, 93660, 93662, 93665, 93668, 93706, 93723, 93725, 93901, 93905, 93906, 93907, 93908, 93925, 93926, 93927, 93930, 93954, 93960, 93962, 95004, 95023, 95043, 95045, 95075, 95301, 95303, 95307, 95312, 95313, 95315, 95317, 95322, 95324, 95326, 95333, 95334, 95340, 95341, 95348, 95351, 95354, 95357, 95358, 95360, 95363, 95365, 95369, 95374, 95380, 95385, 95387, 95388
+        ],
+        description: ""
+    },
+    {
+        name: "Josh Becker",
+        locality: "",
+        result: false,
+        zip: [
+            94002, 94005, 94010, 94014, 94019, 94020, 94021, 94022, 94024, 94025, 94027, 94028, 94030, 94037, 94038, 94040, 94041, 94043, 94044, 94060, 94061, 94062, 94063, 94065, 94066, 94070, 94074, 94080, 94085, 94086, 94087, 94089, 94128, 94301, 94303, 94304, 94305, 94306, 94401, 94402, 94403, 94404, 95002, 95014, 95033, 95051, 95070
+        ],
+        description: ""
+    },
+    {
+        name: "",
+        locality: "",
+        result: true,
+        zip: [
+            93201, 93202, 93203, 93204, 93206, 93212, 93215, 93218, 93219, 93220, 93221, 93223, 93230, 93235, 93239, 93241, 93242, 93245, 93247, 93249, 93250, 93251, 93256, 93257, 93258, 93261, 93263, 93266, 93267, 93270, 93272, 93274, 93277, 93280, 93286, 93291, 93292, 93304, 93305, 93306, 93307, 93308, 93311, 93313, 93314, 93461, 93615, 93616, 93618, 93619, 93625, 93631, 93646, 93647, 93648, 93654, 93656, 93657, 93662, 93666, 93673, 93701, 93702, 93703, 93705, 93706, 93721, 93722, 93723, 93725, 93727, 93728
+        ],
+        description: ""
+    },
+    {
+        name: "David Cortese",
+        locality: "",
+        result: false,
+        zip: [
+            94024, 94087, 94550, 95008, 95014, 95030, 95032, 95033, 95035, 95037, 95051, 95070, 95110, 95111, 95112, 95113, 95116, 95117, 95118, 95119, 95120, 95121, 95122, 95123, 95124, 95125, 95126, 95127, 95128, 95129, 95130, 95132, 95133, 95135, 95136, 95138, 95140, 95148
+        ],
+        description: ""
+    },
+    {
+        name: "",
+        locality: "",
+        result: true,
+        zip: [
+            89019, 92242, 92252, 92256, 92267, 92268, 92277, 92278, 92280, 92284, 92285, 92301, 92304, 92307, 92308, 92309, 92310, 92311, 92314, 92315, 92327, 92332, 92333, 92338, 92342, 92345, 92347, 92356, 92363, 92364, 92365, 92368, 92394, 92398, 93203, 93205, 93206, 93207, 93208, 93212, 93220, 93221, 93222, 93223, 93224, 93225, 93226, 93235, 93238, 93240, 93243, 93244, 93247, 93249, 93251, 93252, 93255, 93257, 93260, 93263, 93265, 93267, 93268, 93271, 93274, 93276, 93277, 93280, 93283, 93285, 93286, 93287, 93291, 93292, 93301, 93304, 93305, 93306, 93307, 93308, 93309, 93311, 93312, 93313, 93314, 93501, 93505, 93516, 93518, 93519, 93523, 93524, 93527, 93528, 93531, 93554, 93555, 93558, 93560, 93561, 93562
+        ],
+        description: ""
+    },
+    {
+        name: "John Laird",
+        locality: "",
+        result: false,
+        zip: [
+            93210, 93252, 93254, 93401, 93402, 93405, 93410, 93420, 93422, 93424, 93426, 93428, 93430, 93432, 93433, 93442, 93444, 93445, 93446, 93449, 93450, 93451, 93452, 93453, 93454, 93458, 93461, 93465, 93906, 93907, 93908, 93920, 93921, 93923, 93924, 93927, 93928, 93930, 93932, 93933, 93940, 93943, 93950, 93953, 93954, 93955, 93960, 94550, 95003, 95004, 95005, 95006, 95007, 95010, 95012, 95013, 95017, 95018, 95019, 95020, 95023, 95033, 95037, 95039, 95041, 95046, 95060, 95062, 95064, 95065, 95066, 95073, 95076, 95111, 95119, 95120, 95123, 95135, 95138, 95139
+        ],
+        description: ""
+    },
+    {
+        name: "",
+        locality: "",
+        result: true,
+        zip: [
+            90046, 90068, 90077, 90210, 91040, 91324, 91325, 91326, 91330, 91331, 91340, 91342, 91343, 91344, 91345, 91352, 91401, 91402, 91403, 91405, 91406, 91411, 91423, 91504, 91505, 91601, 91602, 91604, 91605, 91606, 91607, 91608
+        ],
+        description: ""
+    },
+    {
+        name: "Monique Limon",
+        locality: "",
+        result: false,
+        zip: [
+            91384, 93001, 93003, 93004, 93010, 93012, 93013, 93015, 93021, 93022, 93023, 93030, 93033, 93035, 93036, 93040, 93041, 93042, 93043, 93060, 93063, 93066, 93067, 93101, 93103, 93105, 93108, 93109, 93110, 93111, 93117, 93225, 93243, 93252, 93254, 93427, 93429, 93434, 93436, 93437, 93440, 93441, 93454, 93455, 93458, 93460, 93463
+        ],
+        description: ""
+    },
+    {
+        name: "",
+        locality: "",
+        result: true,
+        zip: [
+            91708, 91709, 91710, 91711, 91739, 91750, 91761, 91762, 91763, 91764, 91765, 91766, 91767, 91768, 91773, 91789, 92313, 92316, 92324, 92335, 92336, 92337, 92376, 92377, 92401, 92407, 92408, 92410, 92411, 92509, 92880
+        ],
+        description: ""
+    },
+    {
+        name: "Kipp Mueller",
+        locality: "",
+        result: false,
+        zip: [
+            91321, 91342, 91350, 91351, 91354, 91355, 91384, 91387, 91390, 92301, 92307, 92308, 92344, 92345, 92368, 92371, 92392, 92394, 92395, 93243, 93252, 93510, 93532, 93534, 93535, 93536, 93543, 93544, 93550, 93551, 93552, 93553, 93560, 93563, 93591
+        ],
+        description: ""
+    },
+    {
+        name: "",
+        locality: "",
+        result: true,
+        zip: [
+            90022, 90601, 90640, 90660, 91006, 91007, 91010, 91016, 91030, 91107, 91702, 91706, 91722, 91723, 91724, 91731, 91732, 91733, 91740, 91744, 91745, 91746, 91748, 91754, 91755, 91770, 91773, 91775, 91776, 91780, 91790, 91791, 91792, 91801, 91803
+        ],
+        description: ""
+    },
+    {
+        name: "Abigail Medina",
+        locality: "",
+        result: false,
+        zip: [
+            91701, 91730, 91737, 91739, 91759, 92220, 92223, 92230, 92305, 92314, 92315, 92320, 92321, 92322, 92324, 92325, 92333, 92336, 92339, 92341, 92344, 92345, 92346, 92352, 92354, 92356, 92358, 92359, 92371, 92372, 92373, 92374, 92378, 92382, 92385, 92386, 92391, 92392, 92397, 92399, 92404, 92405, 92407, 92408, 92410, 92411, 92532, 92543, 92544, 92545, 92548, 92555, 92567, 92570, 92582, 92583, 92584, 92585, 92586, 92587, 92596
+        ],
+        description: ""
+    },
+    {
+        name: "",
+        locality: "",
+        result: true,
+        zip: [
+            90004, 90005, 90006, 90007, 90010, 90012, 90013, 90015, 90017, 90018, 90019, 90020, 90021, 90022, 90023, 90026, 90027, 90028, 90029, 90031, 90032, 90033, 90038, 90039, 90040, 90041, 90042, 90057, 90058, 90063, 90065, 90089, 90090, 90640, 91030, 91105, 91754
+        ],
+        description: ""
+    },
+    {
+        name: "Anthony Portantino",
+        locality: "",
+        result: true,
+        zip: [
+            90027, 90028, 90039, 90042, 90068, 91001, 91006, 91008, 91010, 91011, 91016, 91020, 91024, 91030, 91040, 91042, 91046, 91101, 91103, 91104, 91105, 91106, 91107, 91108, 91201, 91202, 91203, 91204, 91205, 91206, 91207, 91208, 91210, 91214, 91321, 91331, 91342, 91352, 91387, 91501, 91502, 91504, 91505, 91506, 91701, 91702, 91711, 91724, 91740, 91741, 91750, 91759, 91767, 91768, 91773, 91784, 91786, 93510, 93543, 93544, 93550, 93552, 93553, 93563
+        ],
+        description: ""
+    },
+    {
+        name: "",
+        locality: "",
+        result: true,
+        zip: [
+            90004, 90005, 90010, 90019, 90020, 90024, 90025, 90028, 90035, 90036, 90038, 90045, 90046, 90048, 90049, 90064, 90066, 90068, 90069, 90073, 90077, 90094, 90095, 90210, 90211, 90212, 90230, 90245, 90254, 90265, 90266, 90272, 90274, 90275, 90277, 90278, 90290, 90291, 90292, 90293, 90401, 90402, 90403, 90404, 90405, 90501, 90503, 90504, 90505, 90704, 90710, 90717, 90732, 91608
+        ],
+        description: ""
+    },
+    {
+        name: "Henry Stern",
+        locality: "",
+        result: true,
+        zip: [
+            90049, 90263, 90265, 90290, 91301, 91302, 91303, 91304, 91306, 91307, 91311, 91316, 91320, 91321, 91324, 91325, 91326, 91335, 91344, 91355, 91356, 91360, 91361, 91362, 91364, 91367, 91371, 91377, 91381, 91403, 91406, 91411, 91436, 93012, 93021, 93063, 93064, 93065
+        ],
+        description: ""
+    },
+    {
+        name: "",
+        locality: "",
+        result: true,
+        zip: [
+            92028, 92201, 92203, 92210, 92211, 92220, 92225, 92230, 92234, 92236, 92239, 92240, 92241, 92253, 92254, 92258, 92260, 92262, 92264, 92270, 92274, 92276, 92277, 92282, 92503, 92504, 92506, 92508, 92530, 92532, 92536, 92539, 92543, 92544, 92545, 92548, 92549, 92561, 92562, 92563, 92570, 92583, 92584, 92585, 92587, 92590, 92591, 92592, 92595, 92596, 92881, 92883
+        ],
+        description: ""
+    },
+    {
+        name: "Josh Newman",
+        locality: "",
+        result: false,
+        zip: [
+            90620, 90621, 90623, 90630, 90631, 90638, 90680, 90720, 91709, 91710, 91724, 91744, 91748, 91765, 91768, 91773, 91789, 91791, 91792, 92801, 92802, 92804, 92805, 92806, 92807, 92808, 92821, 92823, 92831, 92832, 92833, 92835, 92841, 92844, 92870, 92886, 92887
+        ],
+        description: ""
+    },
+    {
+        name: "",
+        locality: "",
+        result: true,
+        zip: [
+            90001, 90002, 90003, 90006, 90007, 90008, 90011, 90012, 90013, 90014, 90015, 90016, 90017, 90018, 90019, 90021, 90025, 90034, 90035, 90037, 90043, 90044, 90045, 90047, 90056, 90058, 90059, 90061, 90062, 90064, 90066, 90067, 90071, 90079, 90089, 90212, 90230, 90232, 90250, 90292, 90302, 90405
+        ],
+        description: ""
+    },
+    {
+        name: "Richard Roth",
+        locality: "",
+        result: true,
+        zip: [
+            91752, 92324, 92501, 92503, 92504, 92505, 92506, 92507, 92508, 92509, 92518, 92551, 92553, 92555, 92557, 92567, 92570, 92571, 92585, 92586, 92587, 92860, 92879, 92880, 92881, 92882, 92883
+        ],
+        description: ""
+    },
+    {
+        name: "",
+        locality: "",
+        result: true,
+        zip: [
+            90022, 90023, 90040, 90058, 90240, 90241, 90242, 90270, 90601, 90602, 90603, 90604, 90605, 90606, 90620, 90621, 90623, 90630, 90631, 90638, 90640, 90650, 90660, 90670, 90701, 90703, 90706, 90712, 90713, 90715, 90716, 90723, 91733, 91745, 91746, 91748, 91770, 92801, 92833
+        ],
+        description: ""
+    },
+    {
+        name: "Lena Gonzalez",
+        locality: "",
+        result: true,
+        zip: [
+            90001, 90002, 90011, 90040, 90058, 90059, 90201, 90221, 90222, 90255, 90262, 90270, 90280, 90712, 90713, 90723, 90731, 90755, 90802, 90803, 90804, 90805, 90806, 90807, 90808, 90810, 90813, 90814, 90815, 90831
+        ],
+        description: ""
+    },
+    {
+        name: "",
+        locality: "",
+        result: true,
+        zip: [
+            90630, 90680, 90720, 90740, 90742, 90743, 90803, 90804, 90808, 90814, 90815, 90822, 92606, 92614, 92626, 92647, 92648, 92649, 92655, 92683, 92701, 92703, 92704, 92705, 92706, 92707, 92708, 92780, 92802, 92804, 92805, 92806, 92840, 92841, 92843, 92844, 92845, 92866, 92868
+        ],
+        description: ""
+    },
+    {
+        name: "Steven Bradford",
+        locality: "",
+        result: true,
+        zip: [
+            90002, 90044, 90045, 90047, 90059, 90061, 90220, 90221, 90222, 90247, 90248, 90249, 90250, 90260, 90262, 90301, 90302, 90303, 90304, 90305, 90501, 90502, 90503, 90504, 90505, 90506, 90710, 90717, 90731, 90732, 90744, 90745, 90746, 90747, 90802, 90805, 90810, 90813
+        ],
+        description: ""
+    },
+    {
+        name: "",
+        locality: "",
+        result: true,
+        zip: [
+            92003, 92007, 92008, 92009, 92010, 92011, 92024, 92028, 92029, 92054, 92055, 92056, 92057, 92058, 92067, 92075, 92078, 92081, 92083, 92084, 92091, 92530, 92624, 92629, 92630, 92637, 92651, 92653, 92656, 92672, 92673, 92675, 92676, 92677, 92678, 92679, 92688, 92691, 92692, 92694
+        ],
+        description: ""
+    },
+    {
+        name: "Dave Min",
+        locality: "",
+        result: false,
+        zip: [
+            92602, 92603, 92604, 92606, 92610, 92612, 92614, 92617, 92618, 92620, 92625, 92626, 92627, 92629, 92630, 92637, 92646, 92648, 92651, 92653, 92656, 92657, 92660, 92661, 92662, 92663, 92676, 92677, 92679, 92691, 92701, 92704, 92705, 92707, 92780, 92782, 92806, 92807, 92808, 92861, 92865, 92866, 92867, 92868, 92869, 92870, 92886, 92887
+        ],
+        description: ""
+    },
+    {
+        name: "",
+        locality: "",
+        result: true,
+        zip: [
+            91901, 91916, 91931, 91935, 91941, 91942, 91945, 91948, 91962, 91977, 91978, 92003, 92004, 92009, 92019, 92020, 92021, 92024, 92025, 92026, 92027, 92028, 92029, 92036, 92040, 92059, 92060, 92061, 92064, 92065, 92066, 92067, 92069, 92070, 92071, 92078, 92082, 92083, 92084, 92086, 92091, 92115, 92120, 92122, 92124, 92126, 92127, 92128, 92129, 92130, 92131, 92145
+        ],
+        description: ""
+    },
+    {
+        name: "Toni Atkins",
+        locality: "",
+        result: false,
+        zip: [
+            91932, 91942, 91945, 92014, 92025, 92027, 92029, 92037, 92065, 92067, 92071, 92075, 92091, 92101, 92102, 92103, 92104, 92105, 92106, 92107, 92108, 92109, 92110, 92111, 92113, 92114, 92115, 92116, 92117, 92118, 92119, 92120, 92121, 92122, 92123, 92124, 92126, 92127, 92128, 92129, 92130, 92131, 92132, 92134, 92135, 92140, 92147, 92155
+        ],
+        description: ""
+    },
+    {
+        name: "",
+        locality: "",
+        result: true,
+        zip: [
+            91901, 91902, 91905, 91906, 91910, 91911, 91913, 91914, 91915, 91917, 91931, 91932, 91934, 91935, 91945, 91950, 91962, 91963, 91977, 91978, 91980, 92004, 92019, 92101, 92102, 92104, 92105, 92113, 92114, 92115, 92118, 92139, 92154, 92173, 92222, 92225, 92227, 92231, 92233, 92243, 92249, 92250, 92251, 92257, 92259, 92266, 92273, 92274, 92275, 92281, 92283
+        ],
+        description: ""
+    }
+]
+
+// Local Candidates by County_________________________________________________________________________
+const local = [
+    [
+        "Sacramento County",
+        [
+            94571, 95220, 95608, 95610, 95615, 95621, 95624, 95626, 95628, 95630, 95632, 95638, 95639, 95641, 95652, 95655, 95660, 95662, 95670, 95673, 95680, 95683, 95690, 95693, 95742, 95757, 95758, 95811, 95814, 95815, 95816, 95817, 95818, 95819, 95820, 95821, 95822, 95823, 95824, 95825, 95826, 95827, 95828, 95829, 95830, 95831, 95832, 95833, 95834, 95835, 95837, 95838, 95841, 95842, 95843, 95864
+        ],
+        [{
+            position: "Board of Supervisors 3",
+            name: "Gregg Fishman",
+            description: ""
+        }],
+        "http://www.sacdems.org/main/vote/"
+    ],
+    [
+        "Napa County",
+        [
+            94503, 94508, 94515, 94558, 94559, 94567, 94573, 94574, 94576, 94589, 94599
+        ],
+        [{
+                position: "Napa Mayor",
+                name: "Scott Sedgley",
+                description: ""
+            },
+            {
+                position: "St. Helena Mayor",
+                name: "Geoff Ellsworth",
+                description: ""
+            }
+        ],
+        "https://napavalleydems.org/candidates-endorsements/"
+    ],
+    [
+        "Sonoma County",
+        [
+            94515, 94922, 94923, 94928, 94931, 94951, 94952, 94954, 95401, 95403, 95404, 95405, 95407, 95409, 95412, 95421, 95425, 95430, 95431, 95436, 95439, 95441, 95442, 95444, 95446, 95448, 95450, 95452, 95462, 95465, 95471, 95472, 95476, 95486, 95492, 95497
+        ],
+        [{
+                position: "County Supervisor 1",
+                name: "Susan Gorin",
+                description: ""
+            },
+            {
+                position: "County Supervisor 5",
+                name: "Lynda Hopkins",
+                description: ""
+            }
+        ],
+        "https://sonomademocrats.org/endorsements/"
+    ],
+    [
+        "Contra Costa County",
+        [
+            94505, 94506, 94507, 94509, 94511, 94513, 94514, 94516, 94517, 94518, 94519, 94520, 94521, 94523, 94525, 94526, 94528, 94530, 94531, 94547, 94548, 94549, 94551, 94553, 94556, 94561, 94563, 94564, 94565, 94569, 94572, 94575, 94582, 94583, 94588, 94595, 94596, 94597, 94598, 94611, 94706, 94707, 94708, 94801, 94803, 94804, 94805, 94806, 94850, 95219
+        ],
+        [],
+        // "https://www.contracostadems.org/endorsements"
+    ],
+    [
+        "Marin County",
+        [
+            94901, 94903, 94904, 94920, 94924, 94925, 94929, 94930, 94933, 94937, 94938, 94939, 94940, 94941, 94945, 94946, 94947, 94949, 94950, 94952, 94956, 94957, 94960, 94963, 94964, 94965, 94970, 94971, 94972, 94973
+        ],
+        [{
+                position: "Supervisor 2",
+                name: "Katie Rice",
+                description: ""
+            },
+            {
+                position: "Supervisor 3",
+                name: "Stephanie Moulton-Peters",
+                description: ""
+            },
+            {
+                position: "Supervisor 4",
+                name: "Dennis Rodoni",
+                description: ""
+            },
+            {
+                position: "Measure C",
+                name: "Yes",
+                description: ""
+            },
+            {
+                position: "Measure D",
+                name: "No",
+                description: ""
+            },
+            {
+                position: "Measure I",
+                name: "Yes",
+                description: ""
+            }
+        ],
+        "https://marindemocrats.org/endorsements-2020/"
+    ],
+    [
+        "Alameda County",
+        [
+            94501, 94502, 94505, 94514, 94536, 94538, 94539, 94541, 94542, 94544, 94545, 94546, 94550, 94551, 94552, 94555, 94560, 94566, 94568, 94577, 94578, 94579, 94580, 94586, 94587, 94588, 94601, 94602, 94603, 94605, 94606, 94607, 94608, 94609, 94610, 94611, 94612, 94613, 94618, 94619, 94621, 94702, 94703, 94704, 94705, 94706, 94707, 94708, 94709, 94710, 94720, 95035, 95377, 95391
+        ],
+        [{
+                position: "Board of Supervisors 1",
+                name: "Vinnie Bacon",
+                description: "Endorsed by Sierra Club, California League of Conservation Voters, Fremont Unified District Teachers Association."
+            },
+            {
+                position: "Superior Court Judge",
+                name: "Mark Fickes",
+                description: ""
+            }
+        ],
+        "https://ebcitizen.com/2020/09/14/alameda-county-dems-make-their-choices-for-november/"
+    ],
+    [
+        "San Joaquin County",
+        [
+            95202, 95203, 95204, 95205, 95206, 95207, 95209, 95210, 95211, 95212, 95215, 95219, 95220, 95227, 95230, 95231, 95234, 95236, 95237, 95240, 95242, 95258, 95304, 95320, 95330, 95336, 95337, 95358, 95361, 95366, 95376, 95377, 95385, 95391, 95632, 95641, 95686
+        ],
+        [{
+            position: "Board of Supervisors 5",
+            name: "Rhodesia Ransom",
+            description: "Endorsed by SJC Dem Party."
+        }],
+        "http://sjcdems.org/2020-primary-election-endorsements/"
+    ],
+    [
+        "Santa Clara County",
+        [
+            94022, 94024, 94028, 94040, 94041, 94043, 94085, 94086, 94087, 94089, 94301, 94303, 94304, 94305, 94306, 94550, 95002, 95008, 95013, 95014, 95020, 95023, 95030, 95032, 95033, 95035, 95037, 95046, 95050, 95051, 95053, 95054, 95070, 95076, 95110, 95111, 95112, 95113, 95116, 95117, 95118, 95119, 95120, 95121, 95122, 95123, 95124, 95125, 95126, 95127, 95128, 95129, 95130, 95131, 95132, 95133, 95134, 95135, 95136, 95138, 95139, 95140, 95148
+        ],
+        [{
+            position: "Board of Supervisors 3",
+            name: "Otto Lee",
+            description: ""
+        }],
+        "https://sccdp.org/index.php/action-center/2020-endorsed-candidates/"
+    ],
+    [
+        "San Mateo County",
+        [
+            94002, 94005, 94010, 94014, 94015, 94019, 94020, 94021, 94025, 94027, 94028, 94030, 94037, 94038, 94044, 94060, 94061, 94062, 94063, 94065, 94066, 94070, 94074, 94080, 94128, 94303, 94401, 94402, 94403, 94404
+        ],
+        [],
+        "http://www.smcdems.org/endorsements_for_november_2020_election"
+    ],
+    [
+        "San Francisco County",
+        [
+            94102, 94103, 94104, 94105, 94107, 94108, 94109, 94110, 94111, 94112, 94114, 94115, 94116, 94117, 94118, 94121, 94122, 94123, 94124, 94127, 94129, 94130, 94131, 94132, 94133, 94134, 94158
+        ],
+        [],
+        "https://www.sfdemocrats.org/voting/endorsements/2020/7/23/november-3rd-2020-general-election"
+    ],
+    [
+        "Santa Cruz County",
+        [
+            95003, 95005, 95006, 95007, 95010, 95017, 95018, 95019, 95033, 95041, 95060, 95062, 95064, 95065, 95066, 95073, 95076
+        ],
+        [],
+        "https://www.cruzdemocrats.org/copy-of-march-3-endorsements" // website not updated yet
+    ],
+
+    [
+        "Monterey County",
+        [
+            93210, 93426, 93450, 93451, 93461, 93901, 93905, 93906, 93907, 93908, 93920, 93921, 93923, 93924, 93925, 93926, 93927, 93928, 93930, 93932, 93933, 93940, 93943, 93950, 93953, 93954, 93955, 93960, 93962, 95004, 95012, 95039, 95076
+        ],
+        [],
+        "https://montereydems.org/" // website not updated yet
+    ],
+    [
+        "San Benito County",
+        [
+            93210, 93930, 95004, 95023, 95043, 95045, 95075
+        ],
+        [],
+        "https://sanbenitodemocrats.org/san-benito-democrats-2020-endorsements/"
+    ],
+    [
+        "Fresno County",
+        [
+            93210, 93234, 93242, 93602, 93605, 93606, 93608, 93609, 93611, 93612, 93616, 93618, 93619, 93620, 93621, 93622, 93624, 93625, 93626, 93627, 93628, 93630, 93631, 93633, 93634, 93640, 93641, 93646, 93648, 93650, 93651, 93652, 93654, 93656, 93657, 93660, 93662, 93664, 93667, 93668, 93675, 93701, 93702, 93703, 93704, 93705, 93706, 93710, 93711, 93720, 93721, 93722, 93723, 93725, 93726, 93727, 93728, 93730
+        ],
+        [{
+            position: "Board of Education 3",
+            name: "Darren Miller",
+            description: ""
+        }],
+        "https://fresnocountydemocrats.org/endorsements-3/"
+    ],
+    [
+        "Kern County",
+        [
+            93203, 93205, 93206, 93215, 93220, 93222, 93224, 93225, 93226, 93238, 93240, 93241, 93243, 93249, 93250, 93251, 93252, 93255, 93263, 93268, 93276, 93280, 93283, 93285, 93287, 93301, 93304, 93305, 93306, 93307, 93308, 93309, 93311, 93312, 93313, 93314, 93461, 93501, 93505, 93516, 93518, 93519, 93523, 93524, 93527, 93528, 93531, 93554, 93555, 93560, 93561
+        ],
+        [{
+            position: "Board of Supervisors 5",
+            name: "Leticia Perez",
+            description: ""
+        }],
+        "https://kerndemocrats.org/endorsed-candidates/"
+    ],
+    [
+        "Santa Barbara County",
+        [
+            93001, 93013, 93067, 93101, 93103, 93105, 93108, 93109, 93110, 93111, 93117, 93252, 93254, 93427, 93429, 93434, 93436, 93437, 93440, 93441, 93454, 93455, 93458, 93460, 93463
+        ],
+        [],
+        "https://www.sbdems.org/endorsements/"
+    ],
+    [
+        "Ventura County",
+        [
+            90265, 91304, 91307, 91311, 91320, 91360, 91361, 91362, 91377, 91384, 93001, 93003, 93004, 93010, 93012, 93013, 93015, 93021, 93022, 93023, 93030, 93033, 93035, 93036, 93040, 93041, 93042, 93043, 93060, 93063, 93064, 93065, 93066, 93225, 93243, 93252
+        ],
+        [],
+        "http://www.venturacountydemocrats.com/endorsements-2020.html"
+
+    ],
+    [
+        "Los Angeles County",
+        [
+            90001, 90002, 90003, 90004, 90005, 90006, 90007, 90008, 90010, 90011, 90012, 90013, 90014, 90015, 90016, 90017, 90018, 90019, 90020, 90021, 90022, 90023, 90024, 90025, 90026, 90027, 90028, 90029, 90031, 90032, 90033, 90034, 90035, 90036, 90037, 90038, 90039, 90040, 90041, 90042, 90043, 90044, 90045, 90046, 90047, 90048, 90049, 90056, 90057, 90058, 90059, 90061, 90062, 90063, 90064, 90065, 90066, 90067, 90068, 90069, 90071, 90073, 90077, 90079, 90089, 90090, 90094, 90095, 90201, 90210, 90211, 90212, 90220, 90221, 90222, 90230, 90232, 90240, 90241, 90242, 90245, 90247, 90248, 90249, 90250, 90254, 90255, 90260, 90262, 90263, 90265, 90266, 90270, 90272, 90274, 90275, 90277, 90278, 90280, 90290, 90291, 90292, 90293, 90301, 90302, 90303, 90304, 90305, 90401, 90402, 90403, 90404, 90405, 90501, 90502, 90503, 90504, 90505, 90506, 90601, 90602, 90603, 90604, 90605, 90606, 90623, 90630, 90631, 90638, 90640, 90650, 90660, 90670, 90701, 90703, 90704, 90706, 90710, 90712, 90713, 90715, 90716, 90717, 90723, 90731, 90732, 90740, 90744, 90745, 90746, 90747, 90755, 90802, 90803, 90804, 90805, 90806, 90807, 90808, 90810, 90813, 90814, 90815, 90822, 90831, 91001, 91006, 91007, 91008, 91010, 91011, 91016, 91020, 91024, 91030, 91040, 91042, 91046, 91101, 91103, 91104, 91105, 91106, 91107, 91108, 91201, 91202, 91203, 91204, 91205, 91206, 91207, 91208, 91210, 91214, 91301, 91302, 91303, 91304, 91306, 91307, 91311, 91316, 91321, 91324, 91325, 91326, 91330, 91331, 91335, 91340, 91342, 91343, 91344, 91345, 91350, 91351, 91352, 91354, 91355, 91356, 91361, 91362, 91364, 91367, 91371, 91381, 91384, 91387, 91390, 91401, 91402, 91403, 91405, 91406, 91411, 91423, 91436, 91501, 91502, 91504, 91505, 91506, 91601, 91602, 91604, 91605, 91606, 91607, 91608, 91702, 91706, 91711, 91722, 91723, 91724, 91731, 91732, 91733, 91740, 91741, 91744, 91745, 91746, 91748, 91750, 91754, 91755, 91759, 91765, 91766, 91767, 91768, 91770, 91773, 91775, 91776, 91780, 91789, 91790, 91791, 91792, 91801, 91803, 92397, 93243, 93252, 93510, 93532, 93534, 93535, 93536, 93543, 93544, 93550, 93551, 93552, 93553, 93560, 93563, 93591
+        ],
+        [{
+                position: "District Attorney",
+                name: "George Gascon",
+                description: "Endorsed by CA Democratic Party."
+            },
+            {
+                position: "Superior Court, Seat 72",
+                name: "Myanna Dellinger",
+                description: "Climate change, animal law, and international law specialist. Her opponent Steve Morgan is also a great choice and endorsed by the LA Democratic Party."
+            },
+            {
+                position: "Superior Court, Seat 80",
+                name: "David Berger",
+                description: "Endorsed by Stonewall Democratic Club."
+            },
+            {
+                position: "Superior Court, Seat 162",
+                name: "Scott Yang",
+                description: "Endorsed by Stonewall Democratic Club."
+            },
+            {
+                position: "Board of Supervisors, District 2",
+                name: "Holly Mitchell",
+                description: "Endorsed by Stonewall Democratic Club, Governor Gavin Newsom, and former Governor Jerry Brown."
+            },
+            {
+                position: "LA City Council 4",
+                name: "David Ryu",
+                description: "Endorsed by Stonewall Democratic Club."
+            },
+            {
+                position: "LA City Council 10",
+                name: "Mark Ridley-Thomas",
+                description: "Endorsed by Stonewall Democratic Club."
+            },
+            {
+                position: "LA Unified School District Board 3",
+                name: "Scott Schmerelson",
+                description: "Endorsed by Stonewall Democratic Club."
+            },
+            {
+                position: "LA Unified School District Board 7",
+                name: "Patricia Castellanos",
+                description: "Endorsed by Stonewall Democratic Club."
+            },
+        ],
+        "https://www.lacdp.org/candidates/"
+    ],
+    [
+        "Orange County",
+        [
+            90620, 90621, 90623, 90630, 90631, 90638, 90680, 90720, 90740, 90742, 90743, 90808, 90815, 92530, 92602, 92603, 92604, 92606, 92610, 92612, 92614, 92617, 92618, 92620, 92624, 92625, 92626, 92627, 92629, 92630, 92637, 92646, 92647, 92648, 92649, 92651, 92653, 92655, 92656, 92657, 92660, 92661, 92662, 92663, 92672, 92673, 92675, 92676, 92677, 92678, 92679, 92683, 92688, 92691, 92692, 92694, 92701, 92703, 92704, 92705, 92706, 92707, 92708, 92780, 92782, 92801, 92802, 92804, 92805, 92806, 92807, 92808, 92821, 92823, 92831, 92832, 92833, 92835, 92840, 92841, 92843, 92844, 92845, 92861, 92865, 92866, 92867, 92868, 92869, 92870, 92886, 92887
+        ],
+        [{
+            position: "Board of Supervisors 1",
+            name: "Sergio Contreras",
+            description: "Endorsed by OC Democratic Party."
+        }],
+        "https://orangecountydemocrats.com/endorsed-candidates/"
+    ],
+    [
+        "Riverside County",
+        [
+            91752, 92028, 92201, 92203, 92210, 92211, 92220, 92223, 92225, 92230, 92234, 92236, 92239, 92240, 92241, 92253, 92254, 92258, 92260, 92262, 92264, 92270, 92274, 92276, 92277, 92282, 92320, 92324, 92373, 92399, 92501, 92503, 92504, 92505, 92506, 92507, 92508, 92509, 92518, 92530, 92532, 92536, 92539, 92543, 92544, 92545, 92548, 92549, 92551, 92553, 92555, 92557, 92561, 92562, 92563, 92567, 92570, 92571, 92582, 92583, 92584, 92585, 92586, 92587, 92590, 92591, 92592, 92595, 92596, 92860, 92879, 92880, 92881, 92882, 92883
+        ],
+        [{
+            position: "Riverside Mayor",
+            name: "Andy Melendrez",
+            description: ""
+        }],
+        "https://riversidecountydemocrats.org/wp-content/uploads/sites/49/2020/09/Copy-of-2020-RCDP-Endorsed-Candidate-List.pdf"
+    ],
+    [
+        "San Bernardino County",
+        [
+            89019, 91701, 91708, 91709, 91710, 91730, 91737, 91739, 91759, 91761, 91762, 91763, 91764, 91766, 91784, 91786, 92242, 92252, 92256, 92267, 92268, 92277, 92278, 92280, 92284, 92285, 92301, 92304, 92305, 92307, 92308, 92309, 92310, 92311, 92313, 92314, 92315, 92316, 92321, 92322, 92324, 92325, 92327, 92332, 92333, 92335, 92336, 92337, 92338, 92339, 92341, 92342, 92344, 92345, 92346, 92347, 92352, 92354, 92356, 92358, 92359, 92363, 92364, 92365, 92368, 92371, 92372, 92373, 92374, 92376, 92377, 92378, 92382, 92385, 92386, 92391, 92392, 92394, 92395, 92397, 92398, 92399, 92401, 92404, 92405, 92407, 92408, 92410, 92411, 92509, 92880, 93516, 93555, 93558, 93562
+        ],
+        [],
+        "https://www.sanbernardinodemocrats.org/san-bernardino-county-democratic-party-endorses-local-candidates/" // not uodated but soon
+    ],
+    [
+        "San Diego County",
+        [
+            91901, 91902, 91905, 91906, 91910, 91911, 91913, 91914, 91915, 91916, 91917, 91931, 91932, 91934, 91935, 91941, 91942, 91945, 91948, 91950, 91962, 91963, 91977, 91978, 91980, 92003, 92004, 92007, 92008, 92009, 92010, 92011, 92014, 92019, 92020, 92021, 92024, 92025, 92026, 92027, 92028, 92029, 92036, 92037, 92040, 92054, 92055, 92056, 92057, 92058, 92059, 92060, 92061, 92064, 92065, 92066, 92067, 92069, 92070, 92071, 92075, 92078, 92081, 92082, 92083, 92084, 92086, 92091, 92101, 92102, 92103, 92104, 92105, 92106, 92107, 92108, 92109, 92110, 92111, 92113, 92114, 92115, 92116, 92117, 92118, 92119, 92120, 92121, 92122, 92123, 92124, 92126, 92127, 92128, 92129, 92130, 92131, 92132, 92134, 92135, 92139, 92140, 92145, 92147, 92154, 92155, 92173, 92672
+        ],
+        [],
+        "https://sdcdp.ngpvanhost.com/democrats-running-2020-general-election"
+    ]
+
+    // [ "Siskiyou County", [95568, 96014, 96023, 96025, 96027, 96031, 96032, 96034, 96037, 96038, 96039, 96044, 96049, 96050, 96057, 96058, 96064, 96067, 96085, 96086, 96094, 96097, 96134],
+    //     []
+    // ],
+    // [ "Modoc County", [96006, 96015, 96054, 96056, 96101, 96104, 96108, 96110, 96112, 96115, 96116, 96134, 97635],
+    //     []
+    // ],
+    // [ "Del Norte County", [95531, 95543, 95548, 95567],
+    //     []
+    // ],
+    // [ "Humboldt County", [ 95501, 95503, 95511, 95514, 95519, 95521, 95524, 95525, 95526, 95528, 95536, 95537, 95540, 95542, 95545, 95546, 95547, 95549, 95550, 95551, 95553, 95554, 95555, 95556, 95558, 95559, 95560, 95562, 95564, 95565, 95569, 95570, 95571, 95573, 95589
+    //     ], []
+    // ],
+    // [ "Trinity County", [ 95527, 95552, 95563, 95595, 96010, 96024, 96041, 96046, 96048, 96052, 96076, 96091, 96093
+    //         ], []
+    // ],
+    // [ "Shasta County", [ 96001, 96002, 96003, 96007, 96008, 96011, 96013, 96016, 96017, 96019, 96022, 96025, 96028, 96033, 96040, 96047, 96051, 96056, 96059, 96062, 96065, 96069, 96071, 96073, 96075, 96076, 96084, 96087, 96088, 96096
+    //         ], []
+    // ],
+    // [ "Lassen County", [ 96006, 96009, 96056, 96068, 96105, 96109, 96110, 96113, 96114, 96117, 96119, 96121, 96123, 96128, 96130, 96132, 96136, 96137
+    //         ], []
+    // ],
+    // [ "Tehama County", [ 95963, 95973, 96021, 96022, 96029, 96035, 96055, 96059, 96061, 96063, 96074, 96075, 96076, 96080, 96090, 96092
+    //     ], []
+    // ],
+    // [ "Plumas County", [ 95915, 95923, 95934, 95947, 95956, 95971, 95981, 95983, 95984, 96020, 96103, 96105, 96106, 96118, 96122, 96129, 96135, 96137
+    // ], []
+    // ],
+    // [ "Mendocino County", [ 95410, 95415, 95417, 95420, 95425, 95427, 95428, 95429, 95432, 95437, 95445, 95449, 95454, 95456, 95459, 95460, 95463, 95466, 95468, 95469, 95470, 95482, 95488, 95490, 95494, 95585, 95587, 95589
+    // ], []
+    // ],
+    // [ "Lake County", [ 95422, 95423, 95426, 95435, 95443, 95451, 95453, 95457, 95458, 95461, 95464, 95467, 95469, 95485, 95493
+    // ], []
+    // ],
+    // [ "Glen County", [ 95920, 95939, 95943, 95951, 95963, 95970, 95988
+    // ], []
+    // ],
+    // [ "Butte County", [ 95901, 95914, 95916, 95917, 95926, 95928, 95930, 95938, 95941, 95942, 95948, 95954, 95965, 95966, 95968, 95969, 95973, 95974, 95978
+    // ], []
+    // ],
+    // [ "Colusa County", [ 95645, 95912, 95920, 95932, 95950, 95955, 95970, 95979, 95987
+    // ], []
+    // ],
+    // [ "Sutter County", [ 95626, 95645, 95659, 95668, 95674, 95692, 95837, 95948, 95953, 95957, 95982, 95991, 95993
+    // ], []
+    // ],
+    // [ "Yuba County", [ 95648, 95681, 95692, 95901, 95903, 95914, 95918, 95919, 95922, 95925, 95930, 95935, 95941, 95960, 95961, 95962, 95966, 95977, 95981
+    // ], []
+    // ]
+    // [ "Solano County", [ 94510, 94512, 94533, 94534, 94535, 94571, 94585, 94589, 94590, 94591, 94592, 95612, 95618, 95620, 95625, 95687, 95688, 95690, 95694
+    // ], []
+    // ]
 ]
